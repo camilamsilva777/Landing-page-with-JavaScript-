@@ -7,45 +7,41 @@
     <title>ARCA - App de Enchentes</title>
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
-
 <body>
-    <header>
-        <nav>
-            <ul class="nav_home">
-                <li><a href="" class="">problema</a></li>
-                <li><a href="">tecnologias</a></li>
-                <li><a href="">impacto</a></li>
-                <li><a href="">objetivos</a></li>
-                <li><a href="">benefícios</a></li>
-                <li><a href="">dia a dia</a></li>
-            </ul>
-        </nav>
-        <div class="slideshow_text">
-            <div class="slideshow_conteudo">
-                <h1 class="titulo1">Relate enchentes em tempo real.
-                    Salve vidas.
-                    Proteja seu bairro.</h1>
-                <div class="slideshow_button">
-                    <button class="slideshow_button_left">BAIXE O APP</button>
-                    <button class="slideshow_button_right">SAIBA MAIS</button>
-                </div>
-            </div>
+<header class="slideshow-container">
+    <div class="slideshow">
+        <div class="slide_image">
+            <img src="./src/assets/imagem_slideshow1.png" alt="imagem1" style="width: 100%">
         </div>
-        <div class="slideshow">
-            <div class="slide_image">
-                <img src="#" style="width: 100%" alt="imagem1">
-            </div>
-            <div class="slide_image">
-                <img src="#" style="width: 100%" alt="imagem2">
-            </div>
-            <div class="slide_image">
-                <img src="#" style="width: 100%" alt="imagem3">
-            </div>
+        <div class="slide_image">
+            <img src="./src/assets/imagem_slideshow2.png" alt="imagem2" style="width: 100%">
+        </div>
+        <div class="slide_image">
+            <img src="./src/assets/imagem_slideshow3.png" alt="imagem3" style="width: 100%">
+        </div>
 
-            <a class="anterior" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="proximo" onclick="plusSlides(1)">&#10095;</a>
+        <a class="anterior" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="proximo" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    
+    <div class="slideshow_text">
+        <div class="slideshow_conteudo">
+            <h1 class="titulo1">Relate enchentes em tempo real. <br>Salve vidas. <br>Proteja seu bairro.</h1>
+            <div class="slideshow_button">
+                <button class="slideshow_button_left">BAIXE O APP</button>
+                <button class="slideshow_button_right">SAIBA MAIS</button>
+            </div>
         </div>
-    </header>
+    </div>
+
+    
+    <div class="slideshow_pontos">
+        <span class="ponto"></span>
+        <span class="ponto"></span>
+        <span class="ponto"></span>
+    </div>
+</header>
+ <script src="./src/js/script.js"></script>
 </body>
-
 </html>
