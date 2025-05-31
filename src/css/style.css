@@ -1,3 +1,14 @@
+/*FONTE*/
+
+@font-face {
+  font-family: 'FeatherBold';
+  src: url('../assets/Feather\ Bold.ttf');
+}
+
+body{
+  font-family: 'FeatherBold', sans-serif;
+}
+
 
 /* INICIO DA HEADER*/
 
@@ -17,7 +28,7 @@
     z-index: 10;
 }
 
-.slideshow_button butto{
+.slideshow_button button{
     margin: 15px;
     padding: 12px 24px;
     font-size: 1.3rem;
@@ -47,10 +58,13 @@
 }
 
 .slideshow_pontos {
-  text-align: center;
-  margin-top: 15px;
-  position: relative;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 20;
+  text-align: center;
+  width: 100%;
 }
 
 /*SLIDESHOW PONTOS*/
@@ -60,20 +74,20 @@
   height: 14px;
   width: 14px;
   margin: 0 6px;
-  background-color: rgba(255, 255, 255, 0.5); 
+  background-color: #ffffff4d; 
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.4s ease;
-  border: 1px solid #fff;
+  border: 1px solid #68b3fa;
 }
 
 .ponto:hover {
-  background-color: rgba(255, 255, 255, 0.8); 
+  background-color: #5072f9cc; 
 }
 
 .ponto.ativo {
-  background-color: white; 
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.9); 
+  background-color: #3AA0FF; 
+  box-shadow: 0 0 8px #8dc1f2; 
 }
 
 /* FIM DA HEADER*/
