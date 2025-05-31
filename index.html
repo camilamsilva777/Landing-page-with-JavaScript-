@@ -2,67 +2,165 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARCA - App de Enchentes</title>
-    <link rel="stylesheet" href="./src/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARCA - App de Enchentes</title>
+  <link rel="stylesheet" href="./src/css/style.css" />
 </head>
+
 <body>
-<header>
-        <nav>
-            <ul class="nav_home">
-                <img src="./src/assets/logo_gs.png" alt="logo ARCA">
-                <li><a href="" class="">problema</a></li>
-                <li><a href="">tecnologias</a></li>
-                <li><a href="">impacto</a></li>
-                <li><a href="">objetivos</a></li>
-                <li><a href="">benefícios</a></li>
-                <li><a href="">dia a dia</a></li>
-            </ul>
-        </nav>
-<div class="slideshow-container">
-    <div class="slideshow">
+  <header>
+    <nav>
+      <ul class="nav_home">
+        <li><img src="./src/assets/logo_gs.png" alt="logo ARCA" /></li>
+        <li><a href="#secao1">problema</a></li>
+        <li><a href="#secao2">tecnologias</a></li>
+        <li><a href="#secao4">impacto</a></li>
+        <li><a href="#secao5">objetivos</a></li>
+        <li><a href="#secao4">benefícios</a></li>
+        <li><a href="#secao6">dia a dia</a></li>
+      </ul>
+    </nav>
+
+    <div class="slideshow-container">
+      <div class="slideshow">
         <div class="slide_image">
-            <img src="./src/assets/imagem_slideshow1.png" alt="imagem1" style="width: 100%">
+          <img src="./src/assets/imagem_slideshow1.png" alt="imagem1" />
         </div>
         <div class="slide_image">
-            <img src="./src/assets/imagem_slideshow2.png" alt="imagem2" style="width: 100%">
+          <img src="./src/assets/imagem_slideshow2.png" alt="imagem2" />
         </div>
         <div class="slide_image">
-            <img src="./src/assets/imagem_slideshow3.png" alt="imagem3" style="width: 100%">
+          <img src="./src/assets/imagem_slideshow3.png" alt="imagem3" />
         </div>
 
         <a class="anterior" onclick="plusSlides(-1)">&#10094;</a>
         <a class="proximo" onclick="plusSlides(1)">&#10095;</a>
-    </div>
+      </div>
 
-    
-    <div class="slideshow_text">
+      <div class="slideshow_text">
         <div class="slideshow_conteudo">
-            <h1 class="titulo1">Relate enchentes em tempo real. <br>Salve vidas. <br>Proteja seu bairro.</h1>
-            <div class="slideshow_button">
-                <button class="slideshow_button_left">BAIXE O APP</button>
-                <button class="slideshow_button_right">SAIBA MAIS</button>
-            </div>
+          <h1 class="titulo1">
+            Relate enchentes em tempo real.<br />
+            Salve vidas.<br />
+            Proteja seu bairro.
+          </h1>
+          <div class="slideshow_button">
+            <button class="slideshow_button_left">BAIXE O APP</button>
+            <button class="slideshow_button_right">SAIBA MAIS</button>
+          </div>
         </div>
+      </div>
+
+      <div class="slideshow_pontos">
+        <span class="ponto"></span>
+        <span class="ponto"></span>
+        <span class="ponto"></span>
+      </div>
     </div>
+  </header>
+
+  <main>
+    <!-- Intro -->
+    <section class="intro">
+      <h2>Tecnologia e Informação pela preservação da vida.</h2>
+    </section>
+
+    <!-- Problema -->
+    <section id="secao1">
+      <div class="secao1_container">
+        <div class="secao1_texto">
+          <h3>Quando a comunicação falha, vidas ficam em risco.</h3>
+          <p>
+            A ARCA surge a partir da necessidade em resolver um problema real:
+            <b class="destaque_azul">a falta de comunicação</b> durante enchentes e alagamentos no estado de São Paulo.
+          </p>
+        </div>
+        <div class="secao1_imagem">
+          <img src="#" alt="Imagem de enchente" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Tecnologia -->
+    <section id="secao2">
+      <div class="secao2_container">
+        <div class="secao2_texto">
+          <h3>Tecnologia que transforma dados em ação. Por trás da ARCA:</h3>
+          <p>
+            Nos bastidores, usamos <b class="destaque_azul">Python e bibliotecas como NumPy, Pandas e Matplotlib</b>
+            para analisar, organizar e visualizar as informações compartilhadas pela população em tempo real.
+          </p>
+        </div>
+        <div class="secao2_imagem">
+          <img src="#" alt="Imagem Computadores" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Missão -->
+    <section class="secao3">
+      <div class="secao3_container">
+        <img src="#" alt="Logo ARCA" />
+        <div class="secao3_texto">
+          <h2>Conectar. Informar. Proteger.</h2>
+          <p>
+            <b class="destaque_azul">Existimos para levar informação confiável a todos,</b>
+            mesmo nas piores enchentes — de forma simples, acessível e humana.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Público alvo -->
+    <section id="secao4">
+      <div class="secao4_container">
+        <div class="secao4_texto">
+          <h3>Para quem é ARCA:</h3>
+          <p>A ARCA é feita para quem vive na linha de frente das enchentes.</p><br />
+          <p>
+            <b class="destaque_azul">Se você mora em regiões que alagam com frequência,</b>
+            sente na pele a insegurança da água subindo e a falta de informação rápida.
+          </p><br />
+          <p>Essa plataforma é pra você.</p>
+        </div>
+        <div class="secao4_imagem">
+          <img src="#" alt="Imagem enchentes" />
+        </div>
+      </div>
+    </section>
 
     
-    <div class="slideshow_pontos">
-        <span class="ponto"></span>
-        <span class="ponto"></span>
-        <span class="ponto"></span>
-    </div>
-</header>
+    <section class="secao5">
+      <div class="secao5_container">
+        <img src="#" alt="Logo ARCA" />
+        <div class="secao5_texto">
+          <h2>Mais segurança no dia a dia.</h2>
+          <p class="secao5_texto_esquerda">
+            <b class="destaque_azul">Como ARCA muda a vida de quem vive em áreas de risco:</b>
+          </p>
+          <p><b class="destaque_azul">Antes da inundação:</b> você se informa com base nos relatos de quem já está sendo afetado.</p><br />
+          <p><b class="destaque_azul">Durante:</b> você contribui, alerta e acompanha em tempo real no seu bairro.</p>
+        </div>
+      </div>
+    </section>
 
+    <section class="secao6">
+      <div class="secao6_container">
+        <img src="#" alt="Logo ARCA" />
+        <div class="secao6_texto">
+          <h2>Sua informação salva vidas.</h2>
+          <p>Compartilhe.</p>
+          <p>Baixe ARCA.</p>
+          <div class="secao6_button">
+            <button>COMECE AGORA</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-
-
-
-
-
-
-
- <script src="./src/js/script.js"></script>
+  <script src="./src/js/script.js"></script>
 </body>
+
 </html>
