@@ -5,12 +5,87 @@
   src: url('../assets/Feather\ Bold.ttf');
 }
 
+/*ESTILIZAÇÃO GERAL*/
+
 body{
+  margin: 0;
+  padding: 0;
   font-family: 'FeatherBold', sans-serif;
+  background-color: #160C2B;
+  color: white;
+  overflow-x: hidden;
 }
 
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+/*PALETA DE CORES*/
+:root{
+  --azul-header: #9DD0FF;
+  --azul-destaque: #3AA0FF;
+  --verde-texto: #59F6E4;
+}
 
 /* INICIO DA HEADER*/
+
+header{
+  position: relative;
+  height: auto;
+}
+
+/*NAV*/
+nav{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--azul-header);
+  padding-left: 20px;
+  height: auto;
+  border-bottom: 9px solid var(--azul-destaque);
+}
+
+nav {
+  top: 40px;
+  background-color: var(--azul-header);
+  border-radius: 50px;
+  display: flex;
+  padding: 16px 24px;
+  height: auto;
+  z-index: 100;
+  overflow: visible;
+  height: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav_home {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  list-style: none;
+  margin: 0;
+  padding: 0 0px;
+}
+
+.nav_home li a {
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+}
+
+.nav_home img{
+  height: 170px;
+  width: auto;
+}
+
+nav a:hover{
+  color: var(--azul-destaque);
+}
 
 /*SLIDESHOW*/
 .slideshow-container{
@@ -25,7 +100,7 @@ body{
     left: 50vw;
     transform: translate(-50%, -30%);
     color: white;
-    z-index: 10;
+    z-index: 1;
 }
 
 .slideshow_button button{
@@ -91,3 +166,23 @@ body{
 }
 
 /* FIM DA HEADER*/
+
+
+/*MAIN*/
+
+.barra-vertical {
+  width: 2px;                      /* espessura */
+  height: 30px;                    /* altura da barrinha */
+  background-color: #00000066;     /* preto com 40% de opacidade */
+  margin: 0 15px;                  /* espaçamento horizontal */
+  border-radius: 10px;
+}
+
+
+.linha-azul {
+  width: 70%;            /* ou 100%, dependendo do layout */
+  height: 4px;           /* espessura da linha */
+  background-color: #3AA0FF; /* cor da barrinha (igual ao destaque que você usa) */
+  margin: 40px auto;     /* espaçamento vertical e centralização */
+  border-radius: 8px;    /* cantos arredondados, opcional */
+}
