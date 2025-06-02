@@ -268,6 +268,58 @@ main img{
   width: 400px;
 }
 
+#secao3 {
+  position: relative;
+  width: 100%;
+  min-height: 800px; 
+  background-image: url('../assets/imagem_secao3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  padding: 60px 20px;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* ou defina uma altura específica, como 400px */
+  padding: 20px;
+}
+
+#secao3 h3 {
+  font-size: 3.4rem;
+  margin-top: 10vh;
+  justify-content: center;
+  text-align: center;
+}
+
+.secao3_texto{
+  font-size: 1.7rem;
+
+}
+
+.secao3_container {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  height: 100%;
+}
+.secao3_paragrafo {
+  box-sizing: border-box;
+  width: 700px;
+  padding-top: 45vh;
+  text-align: center;
+  justify-content: center; /* ou left/right se preferir */
+  margin: auto;
+}
+
+.secao3_paragrafo .destaque_azul{
+  color: var(--verde-texto);
+}
+
+
+
 #secao6 {
   position: relative;
   width: 100%;
