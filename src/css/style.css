@@ -230,7 +230,7 @@ nav a:hover{
 /* FIM DA HEADER*/
 
 
-/*MAIN*/
+/*INICIO DA MAIN*/
 
 .barra-vertical {
   width: 2px;                      /* espessura */
@@ -557,7 +557,9 @@ font-size: 2rem;
   height: auto;
 }
 
-
+#secao5 li{
+  list-style-type: square;
+}
 
 
 
@@ -635,3 +637,41 @@ font-size: 2rem;
 }
 
 /*FIM DA MAIN*/
+
+/*FOOTER*/
+
+
+footer {
+  background-color: #3AA0FF;
+  width: 100%;
+  padding: 40px 0; /* aumenta a altura com padding vertical */
+  text-align: center;
+}
+
+footer .conteudo_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+footer ul {
+  display: flex;
+  gap: 40px; /* espaçamento entre os ícones */
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+footer img {
+  width: 50px; /* aumenta tamanho dos ícones */
+  height: auto;
+}
+
+footer .copyright {
+  margin-top: 40px;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+/*FIM DO FOOTER*/
