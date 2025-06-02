@@ -8,6 +8,8 @@
 /*ESTILIZAÇÃO GERAL*/
 
 body{
+  margin: 0;
+  padding: 0;
   font-family: 'FeatherBold', sans-serif;
   background-color: #160C2B;
   color: white;
@@ -110,7 +112,7 @@ nav a:hover{
     font-size: 1.3rem;
     cursor: pointer;
     border-radius: 50px;
-    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .slideshow_button_left{
@@ -573,28 +575,31 @@ font-size: 2rem;
 }
 
 .secao7_logo img {
-  max-width: 200px;
+  max-width: 250px;
   height: auto;
+  padding-left: 50vw;
 }
 
 .secao7_texto {
+  max-width: 50%;
   display: flex;
   justify-content: left;
   align-items: center;
-  flex-direction: row; /* lado a lado */
+  flex-direction: row;
   gap: 20px;
 }
 
 .secao7_linha {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center; /* CENTRALIZA VERTICALMENTE */
   gap: 20px;
 }
 
 .secao7_mensagem {
   color: white;
-  text-align: right;
+  text-align: left; /* Garante alinhamento à esquerda */
+  font-size: 2.3rem;
 }
 
 .secao7_mensagem h2{
@@ -603,13 +608,14 @@ font-size: 2rem;
 
 .secao7_button button{
     box-sizing: border-box;
+    height: 10vh;
     width: 14vw;
     margin: 15px;
     padding: 12px 24px;
     font-size: 1.3rem;
     cursor: pointer;
     border-radius: 50px;
-    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
     box-sizing: border-box;
   color: black;
   background-color: var(--verde-texto);
@@ -622,7 +628,10 @@ font-size: 2rem;
   background-color: #00ffd0; 
   color: white; 
   border: none;
-  height: 7vh;
-  transition: ease-in-out;
+  font-size: 1.5rem;
+  background-color: #00ffd0; 
+  color: white;
+  border: none;
 }
 
+/*FIM DA MAIN*/
