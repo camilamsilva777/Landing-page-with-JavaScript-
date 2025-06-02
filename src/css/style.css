@@ -240,7 +240,7 @@ nav a:hover{
 
 
 .linha-azul {
-  width: 70%;            
+  width: 60%;            
   height: 4px;           
   background-color: #3AA0FF; 
   margin: 40px auto;     
@@ -265,7 +265,8 @@ h3{
 }
 
 main img{
-  width: 400px;
+  width: 600px;
+  border-radius: 20px;
 }
 
 #secao3 {
@@ -379,3 +380,249 @@ main img{
 .secao6_texto_direita b{
   text-align: left;
 }
+
+
+#secao1 {
+  padding: 60px 20px;
+}
+
+#secao1 h3{
+font-size: 2rem;
+}
+
+.secao1_container {
+  display: flex;
+  align-items: center;      /* alinha verticalmente */
+ /* espaço entre texto e imagem */
+  gap: 30px;                /* espaço entre os dois blocos */
+  flex-wrap: wrap;          /* permite que quebre em telas menores */
+}
+
+.secao1_texto {
+  box-sizing: border-box;
+  padding-left: 20vw;
+  max-width: 50%;
+  flex: 1;
+  color: white;
+  font-size: 1rem;
+}
+
+.secao1_imagem {
+  max-width: 50%;
+  flex: 1;
+  text-align: left;       /* centraliza a imagem dentro do div */
+}
+
+
+
+
+.secao2_imagem img {
+  max-width: 100%;
+  height: auto;
+}
+
+#secao2 {
+  padding: 60px 20px;
+}
+
+#secao2 h3{
+font-size: 2rem;
+}
+
+.secao2_container {
+  display: flex;
+  align-items: center;      /* alinha verticalmente */
+ /* espaço entre texto e imagem */
+  gap: 30px;                /* espaço entre os dois blocos */
+  flex-wrap: wrap;          /* permite que quebre em telas menores */
+}
+
+.secao2_texto {
+  box-sizing: border-box;
+  padding-right: 20vw;
+  max-width: 50%;
+  flex: 1;
+  color: white;
+  font-size: 1rem;
+}
+
+.secao2_imagem {
+  max-width: 50%;
+  flex: 1;
+  text-align: right;       /* centraliza a imagem dentro do div */
+}
+
+
+
+.secao2_imagem img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#secao4 {
+  padding: 60px 20px;
+}
+
+#secao4 h3{
+font-size: 2rem;
+}
+
+.secao4_container {
+  display: flex;
+  align-items: center;      /* alinha verticalmente */
+ /* espaço entre texto e imagem */
+  gap: 30px;                /* espaço entre os dois blocos */
+  flex-wrap: wrap;          /* permite que quebre em telas menores */
+}
+
+.secao4_texto {
+  box-sizing: border-box;
+  padding-left: 20vw;
+  max-width: 50%;
+  flex: 1;
+  color: white;
+  font-size: 1rem;
+}
+
+.secao4_imagem {
+  max-width: 50%;
+  flex: 1;
+  text-align: left;       /* centraliza a imagem dentro do div */
+}
+
+
+
+.secao4_imagem img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+#secao5 {
+  padding: 60px 20px;
+}
+
+.secao5_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.secao5_texto {
+  flex: 1;
+  max-width: 50%;
+  color: white;
+  font-size: 1rem;
+  text-align: left;
+  padding-left: 5vw;
+  box-sizing: border-box;
+}
+
+.secao5_imagem {
+  flex: 1;
+  max-width: 50%;
+  text-align: right;
+}
+
+.secao5_imagem img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+#secao7 {
+  padding: 60px 20px;
+}
+
+.secao7_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.secao7_logo img {
+  max-width: 200px;
+  height: auto;
+}
+
+.secao7_texto {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row; /* lado a lado */
+  gap: 20px;
+}
+
+.secao7_linha {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.secao7_mensagem {
+  color: white;
+  text-align: right;
+}
+
+.secao7_mensagem h2{
+  color: var(--verde-texto);
+}
+
+.secao7_button button{
+    box-sizing: border-box;
+    width: 14vw;
+    margin: 15px;
+    padding: 12px 24px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    box-sizing: border-box;
+  color: black;
+  background-color: var(--verde-texto);
+  border-bottom: 7px solid #387871 ;
+}
+
+
+
+.secao7_button button:hover {
+  background-color: #00ffd0; 
+  color: white; 
+  border: none;
+  height: 7vh;
+  transition: ease-in-out;
+}
+
