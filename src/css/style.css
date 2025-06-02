@@ -109,7 +109,7 @@ nav a:hover{
     font-size: 1.3rem;
     border: none;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 30%;
 }
 
 .slideshow_button_left {
@@ -165,6 +165,50 @@ nav a:hover{
   box-shadow: 0 0 8px #8dc1f2; 
 }
 
+.slideshow_conteudo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 50px; 
+}
+
+/*ORGANIZANDO TEXTO, LOGO E BOTOES DA HEADER*/
+
+
+.slideshow_esquerda {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0; 
+}
+
+
+.slideshow_logo img {
+  padding-left: 0px;
+  padding-top: 150px;
+  width: 250px;
+  margin-bottom: 0; 
+}
+
+.slideshow_texto h1 {
+  margin-top: 0;
+}
+
+/* O texto */
+.slideshow_texto {
+    
+  font-size: 2rem;
+  width: 800px;
+}
+
+/* Botões empilhados */
+.slideshow_button {
+  padding-top: 40%;
+  gap: 12px;
+}
+
+
+
 /* FIM DA HEADER*/
 
 
@@ -180,9 +224,9 @@ nav a:hover{
 
 
 .linha-azul {
-  width: 70%;            /* ou 100%, dependendo do layout */
-  height: 4px;           /* espessura da linha */
-  background-color: #3AA0FF; /* cor da barrinha (igual ao destaque que você usa) */
-  margin: 40px auto;     /* espaçamento vertical e centralização */
-  border-radius: 8px;    /* cantos arredondados, opcional */
+  width: 70%;            
+  height: 4px;           
+  background-color: #3AA0FF; 
+  margin: 40px auto;     
+  border-radius: 8px;   
 }
