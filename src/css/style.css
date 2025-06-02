@@ -8,8 +8,6 @@
 /*ESTILIZAÇÃO GERAL*/
 
 body{
-  margin: 0;
-  padding: 0;
   font-family: 'FeatherBold', sans-serif;
   background-color: #160C2B;
   color: white;
@@ -131,6 +129,8 @@ nav a:hover{
   background-color: var(--azul-destaque); 
   color: white; 
   border: none;
+  height: 7vh;
+  transition: ease-in-out;
 }
 
 .slideshow_button_right:hover {
@@ -150,7 +150,7 @@ nav a:hover{
 
 .slideshow_pontos {
   position: absolute;
-  bottom: 20px;
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
@@ -161,15 +161,15 @@ nav a:hover{
 /*SLIDESHOW PONTOS*/
 
 .ponto {
+
   display: inline-block;
-  height: 14px;
-  width: 14px;
+  height: 20px;
+  width: 20px;
   margin: 0 6px;
   background-color: #ffffff4d; 
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.4s ease;
-  border: 1px solid #68b3fa;
 }
 
 .ponto:hover {
@@ -245,4 +245,85 @@ nav a:hover{
   background-color: #3AA0FF; 
   margin: 40px auto;     
   border-radius: 8px;   
+}
+
+.intro{
+  padding-top: 20px;
+  font-size: 1.8rem;
+  color: var(--verde-texto);
+  text-align: center;
+  justify-content: center;
+}
+
+.destaque_azul{
+  color: var(--azul-destaque);
+}
+
+h3{
+  color: var(--verde-texto);
+  font-size: 1.6rem;
+}
+
+main img{
+  width: 400px;
+}
+
+#secao6 {
+  position: relative;
+  width: 100%;
+  min-height: 700px; 
+  background-image: url('../assets/imagem_secao6.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  padding: 60px 20px;
+  justify-content: center;
+
+}
+
+.secao6_conteudo {
+  max-width: 70%;
+  text-align: center;
+}
+
+#secao6 h3 {
+  font-size: 3.4rem;
+  margin-top: 0;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.secao6_texto_esquerda{
+  padding-top: 5vh;
+  font-size: 2rem;
+  justify-content: left;
+}
+
+.secao6_texto_container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.secao6_texto_esquerda,
+.secao6_texto_direita {
+  flex: 1;
+}
+
+.secao6_texto_esquerda {
+  text-align: left;
+  font-size: 2rem;
+}
+
+.secao6_texto_direita {
+  margin-right: 0;
+  padding-top: 20vh;
+  text-align: right;
+  font-size: 1.8rem;
+}
+
+.secao6_texto_direita b{
+  text-align: left;
 }

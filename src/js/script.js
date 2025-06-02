@@ -34,3 +34,17 @@ function mostrarSlides() { //informa que a função mostrarSlides será a respon
 
 
 mostrarSlides();    //faz a função funcionar
+
+
+  // Salvar a posição de rolagem antes da atualização
+  window.addEventListener('beforeunload', () => {
+    sessionStorage.setItem('scrollPosition', window.scrollY);
+  });
+
+  // Restaurar a posição ao recarregar
+  window.addEventListener('load', () => {
+    const scrollPosition = sessionStorage.getItem('scrollPosition');
+    if (scrollPosition) {
+      window.scrollTo(0, parseInt(scrollPosition));
+    }
+  });
