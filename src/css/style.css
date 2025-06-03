@@ -64,7 +64,7 @@ nav {
   transform: translateX(-50%);
 }
 
-.nav_home {
+.nav_list {
   display: flex;
   align-items: center;
   gap: 60px;
@@ -73,14 +73,14 @@ nav {
   padding: 0 0px;
 }
 
-.nav_home li a {
+.nav_list li a {
   color: rgb(0, 0, 0);
   font-size: 1.5rem;
 }
 
-.nav_home img {
-    height: 170px; /* Novo tamanho */
-    width: auto;
+.nav-list img  {
+    height: 170px  !important;
+    width: auto  !important;
 }
 
 nav a:hover{
