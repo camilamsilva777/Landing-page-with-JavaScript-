@@ -11,7 +11,15 @@
 <body>
   <header>
     <nav>
-      <ul class="nav_home">
+    <!-- 1. Botão Hambúrguer Adicionado Aqui -->
+    <div class="hamburger-menu" id="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- 2. Sua Lista Modificada -->
+    <ul class="nav-list" id="nav-list">  <!-- Classe e ID alterados aqui -->
         <li><img src="./src/assets/logo_gs.png" alt="logo ARCA" /></li>
         <li><div class="barra-vertical"></div></li>
         <li><a href="#secao1">problema</a></li>
@@ -21,10 +29,9 @@
         <li><a href="#secao5">benefícios</a></li>
         <li><a href="#secao6">rotina</a></li>
         <li><a href="#">quiz</a></li>
-
-      </ul>
-    </nav>
-
+    </ul>
+</nav>
+   
     <div class="slideshow-container">
       <div class="slideshow">
         <div class="slide_image">
@@ -239,5 +246,6 @@
 </footer>
   
   <script src="./src/js/script.js"></script>
+  <script src="./src/js/hamburguer_script.js"></script>
 </body>
 </html>
