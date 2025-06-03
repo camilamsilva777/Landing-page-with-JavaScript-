@@ -78,9 +78,9 @@ nav {
   font-size: 1.5rem;
 }
 
-.nav_home img{
-  height: 170px;
-  width: auto;
+.nav_home img {
+    height: 60px; /* Novo tamanho */
+    width: auto;
 }
 
 nav a:hover{
@@ -203,7 +203,7 @@ nav a:hover{
 
 .slideshow_logo img {
   padding-left: 0px;
-  padding-top: 150px;
+  padding-top: 125px;
   width: 250px;
   margin-bottom: 0; 
 }
@@ -471,13 +471,6 @@ font-size: 2rem;
 
 
 
-
-
-
-
-
-
-
 #secao4 {
   padding: 60px 20px;
 }
@@ -675,3 +668,133 @@ footer .copyright {
 }
 
 /*FIM DO FOOTER*/
+
+
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    margin-left: 20px; 
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: white; 
+    transition: all 0.3s ease;
+}
+
+
+nav > ul.nav-list { 
+    display: flex;
+    align-items: center; 
+    flex-direction: row; 
+    position: static; 
+    background-color: transparent; 
+    box-shadow: none; 
+    width: auto; 
+    padding: 0; 
+    margin: 0;
+     list-style: none;
+     margin: 0;
+     gap: 15px; 
+}
+
+
+nav > ul.nav-list li {
+    margin: 0 10px; 
+}
+
+
+nav > ul.nav-list li > img,
+nav > ul.nav-list li > .barra-vertical {
+   display: inline-block; 
+   margin: 0; 
+}
+
+
+
+@media (max-width: 768px) {
+    
+    nav > ul.nav-list {
+        display: none; 
+        flex-direction: column;
+        width: 100%; 
+        background-color: var(--azul-header); 
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        z-index: 99; 
+        border-radius: 0 0 10px 10px; 
+    }
+
+    
+    nav > ul.nav-list.active {
+        display: flex;
+    }
+
+    
+    nav > ul.nav-list li {
+        margin: 10px 0;
+    }
+
+     
+    nav > ul.nav-list.active li > img,
+    nav > ul.nav-list.active li > .barra-vertical {
+       display: none;
+    }
+
+   
+    .hamburger-menu {
+        display: flex; 
+    }
+
+    
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    
+    nav {
+      justify-content: space-between; 
+      
+    }
+}
+
+/* Ajustes para o logo */
+.nav_home img, 
+.slideshow_logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* Garante que o menu mobile não exceda a tela */
+@media (max-width: 768px) {
+    .nav-list.active {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+/* Ajuste para a logo ARCA */
+.slideshow_logo img {
+    width: 150px; /* Tamanho reduzido (ajuste conforme necessidade) */
+    height: auto;
+    margin: 0 auto; /* Centraliza */
+    display: block; /* Remove espaços indesejados */
+}

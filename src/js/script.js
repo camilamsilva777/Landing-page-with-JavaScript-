@@ -48,7 +48,60 @@ mostrarSlides();    //faz a função funcionar
       window.scrollTo(0, parseInt(scrollPosition));
     }
   });
+  
+  
+// Código para o menu hamburguer
+document.addEventListener('DOMContentLoaded', () => {
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide_image');
+    const pontos = document.querySelectorAll('.ponto');
 
+    function showSlide(index) {
+        slides.forEach(slide => slide.style.display = 'none');
+        pontos.forEach(ponto => ponto.classList.remove('ativo'));
+        slides[index].style.display = 'block';
+        pontos[index].classList.add('ativo');
+    }
+
+    function nextSlide() {
+        slideIndex = (slideIndex + 1) % slides.length;
+        showSlide(slideIndex);
+    }
+
+    // Inicia automaticamente
+    let interval = setInterval(nextSlide, 3000);
+
+    // Controles das bolinhas
+    pontos.forEach((ponto, i) => {
+        ponto.addEventListener('click', () => {
+            clearInterval(interval);
+            slideIndex = i;
+            showSlide(slideIndex);
+            interval = setInterval(nextSlide, 3000);
+        });
+    });
+});
+
+// hamburguer_script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger-menu');
+    const navList = document.getElementById('nav-list');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navList.classList.toggle('active');
+    });
+
+    // Fecha ao clicar em links
+    navList.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                hamburger.classList.remove('active');
+                navList.classList.remove('active');
+            }
+        });
+    });
+});
 
 //COMANDOS DO QUIZ
 
