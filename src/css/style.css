@@ -79,7 +79,7 @@ nav {
 }
 
 .nav_home img {
-    height: 60px; /* Novo tamanho */
+    height: 170px; /* Novo tamanho */
     width: auto;
 }
 
@@ -630,6 +630,58 @@ font-size: 2rem;
 }
 
 /*FIM DA MAIN*/
+
+/*INICIO DO QUIZ*/
+
+#secao8{
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.spnQtd {
+  text-align: end;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.secao8 button {
+  width: 100%;
+  text-align: start;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #008CCC;
+  color: white;
+}
+
+.finish {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.finish button {
+  text-align: center;
+}
 
 /*FOOTER*/
 
