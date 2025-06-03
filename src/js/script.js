@@ -48,3 +48,6 @@ mostrarSlides();    //faz a função funcionar
       window.scrollTo(0, parseInt(scrollPosition));
     }
   });
+
+
+  
