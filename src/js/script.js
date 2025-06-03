@@ -50,4 +50,70 @@ mostrarSlides();    //faz a função funcionar
   });
 
 
-  
+//COMANDOS DO QUIZ
+
+const question = document.querySelector(".question"); //pergunta
+const answers = document.querySelector(".answers"); //botoes de respostas
+const spnQtd = document.querySelector(".spnQtd"); //contador de perguntas
+const textFinish = document.querySelector(".finish span");  //acertos
+const content = document.querySelector(".content");   //container do quiz
+const contentFinish = document.querySelector(".finish");    //quiz ja finalizado
+const btnRestart = document.querySelector(".finish button");    //botao que recomeça o quiz
+
+import questions from "./questoes.js";    //importa as perguntas de outro arquivo
+
+let currentIndex = 0;   //em qual pergunta está
+let questionsCorrect = 0;   //quantidade de questoes acertadas ate o momento
+
+btnRestart.onclick = () => {
+  content.style.display = "flex";
+  contentFinish.style.display = "none";
+
+  currentIndex = 0;
+  questionsCorrect = 0;                     //da a opcao de reiniciar o quiz, reinicia os contadores e carrega a primeira pergunta
+  loadQuestion();
+};
+
+function nextQuestion(e) {
+  if (e.target.getAttribute("data-correct") === "true") {
+    questionsCorrect++;                                     //verifica se a resposta escolhida é a correta, se há perguntasd, passa pra proxima
+  }                                                       
+
+  if (currentIndex < questions.length - 1) {
+    currentIndex++;
+    loadQuestion();
+  } else {                                      //se era a ultima pergunta, finaliza
+    finish();
+  }
+}
+
+function finish() {
+  textFinish.innerHTML = `você acertou ${questionsCorrect} de ${questions.length}`;
+  content.style.display = "none";
+  contentFinish.style.display = "flex";                   //finaliza o quiz e mostra a pontuação final
+}
+
+function loadQuestion() {
+  spnQtd.innerHTML = `${currentIndex + 1}/${questions.length}`;
+  const item = questions[currentIndex];
+  answers.innerHTML = "";                             //atualiza o contador
+  question.innerHTML = item.question;                   //carrega a pergunta atual
+
+  item.answers.forEach((answer) => {
+    const div = document.createElement("div");
+
+    div.innerHTML = `
+    <button class="answer" data-correct="${answer.correct}">
+      ${answer.option}                  
+    </button>                     
+    `;
+
+    answers.appendChild(div);
+  });
+
+  document.querySelectorAll(".answer").forEach((item) => {
+    item.addEventListener("click", nextQuestion);
+  });
+}
+
+loadQuestion();
