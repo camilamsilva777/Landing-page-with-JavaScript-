@@ -1444,7 +1444,7 @@ nav > ul.nav-list li > .barra-vertical {
 
     /* style contato */
 .contact {
-    background-color: var(--background);
+    background-color: rgb(242, 255, 0);
     margin: 90px;
     display: flex;
     justify-content: end;
@@ -1453,7 +1453,7 @@ nav > ul.nav-list li > .barra-vertical {
 .contact h2 {
     text-align: center;
     color: var(--font);
-    font-size: var(--font-tittle);
+    font-size: var(--verde-texto);
     font-weight: 500;
     margin-bottom: 30px;
 }
@@ -1485,6 +1485,10 @@ form {
 .form-group textarea {
     resize: vertical;
     min-height: 150px;
+}
+
+.logo_formulario{
+  width: 100px;
 }
 
 .error-message {
