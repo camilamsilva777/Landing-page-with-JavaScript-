@@ -1,0 +1,1514 @@
+/*FONTE*/
+@font-face {
+  font-family: 'FeatherBold';
+  src: url('../assets/Feather Bold.ttf');
+}
+
+/*ESTILIZAÇÃO GERAL*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'FeatherBold', sans-serif;
+  background-color: var(--background);
+  color: white;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*PALETA DE CORES*/
+:root {
+  --azul-header: #9DD0FF;
+  --azul-destaque: #3AA0FF;
+  --verde-texto: #59F6E4;
+  --background: #160C2B;
+  --font:white;
+  --borda:#387871;
+  --hover:#00ffd0;
+  --borda-iniciar:#1d3e3a;
+}
+
+[data-theme="yellow"] {
+  --hover:rgb(255, 67, 145);
+  --primary-color: #e67ddd;
+  --verde-texto: #711994;
+  --borda:#1f0529;
+  --borda-iniciar:#000000;
+  --background: #f0f0f0;
+  --azul-destaque: #ff3cc4;
+  --color: #64005c;
+  --azul-header: #f8a7c9;
+  --font:rgb(126, 0, 109);
+  --box-shadow: 0px 0px 10px 2px #e9e9e94b;
+}
+
+[data-theme="green"] {
+  --primary-color: #29cf00;
+}
+
+/* INICIO DA HEADER*/
+header {
+  position: relative;
+  height: auto;
+}
+
+/* botao tema */
+.theme-switcher {
+  margin-bottom: 200px;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 1;
+}
+
+.theme-switcher h1 {
+  font-size: var(--font-size2);
+}
+
+.theme-btn {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 0px;
+  cursor: pointer;
+  box-shadow: 0px 0px 7px 2px #00000025;
+  transition: var(--transition);
+}
+
+.theme-btn.red {
+  background-color: blue;
+}
+
+.theme-btn.yellow {
+  background-color: pink;
+}
+
+.theme-btn.green {
+  background-color: #29cf00;
+}
+
+.theme-btn.active {
+  transform: scale(1.1);
+}
+/*NAV*/
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--azul-header);
+  padding-left: 20px;
+  height: auto;
+  border-bottom: 9px solid var(--azul-destaque);
+  top: 40px; /* Adicionado aqui para evitar duplicidade */
+  border-radius: 50px;
+  z-index: 100;
+  overflow: visible;
+  height: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 24px; /* Unificado */
+}
+
+.nav_list {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  list-style: none;
+  margin: 0;
+  padding: 0 0px;
+}
+
+.nav_list li a {
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+}
+
+.nav-list img {
+  height: 170px !important;
+  width: auto !important;
+}
+
+nav a:hover {
+  color: var(--azul-destaque);
+  font-size: 1.8rem;
+  transition: 0.3s ease-in-out;
+}
+
+/*SLIDESHOW*/
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slideshow_text {
+  position: absolute;
+  top: 30vh;
+  left: 50vw;
+  transform: translate(-50%, -30%);
+  z-index: 1;
+}
+
+.slideshow_button button {
+  box-sizing: border-box;
+  width: 14vw;
+  margin: 15px;
+  padding: 12px 24px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.slideshow_button_left {
+  box-sizing: border-box;
+  color: black;
+  background-color: var(--azul-header);
+  border-bottom: 7px solid var(--azul-destaque);
+}
+
+.slideshow_button_right {
+  color: var(--azul-destaque);
+  border-bottom: 7px solid grey;
+}
+
+.slideshow_button button:hover {
+  background-color: var(--azul-destaque);
+  color: var(--font);
+  border: none;
+  height: 7vh;
+  transition: ease-in-out;
+}
+
+.slideshow_button_right:hover {
+  color: rgb(126, 0, 109);
+  border-color: rgb(126, 0, 109);
+  border: none;
+}
+
+.slide_image {
+  display: none;
+}
+
+.slide_image img {
+  width: 100%;
+  height: auto;
+}
+
+.slideshow_pontos {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  text-align: center;
+  width: 100%;
+}
+
+/*SLIDESHOW PONTOS*/
+.ponto {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 6px;
+  background-color: #ffffff4d;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.ponto:hover {
+  background-color: #5072f9cc;
+}
+
+.ponto.ativo {
+  background-color: #3AA0FF;
+  box-shadow: 0 0 8px #8dc1f2;
+}
+
+.slideshow_conteudo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 50px;
+}
+
+/*ORGANIZANDO TEXTO, LOGO E BOTOES DA HEADER*/
+.slideshow_esquerda {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.slideshow_logo img {
+  padding-left: 0px;
+  padding-top: 125px;
+  width: 250px;
+  margin-bottom: 0;
+}
+
+.slideshow_texto h1 {
+  margin-top: 0;
+}
+
+/* O texto */
+.slideshow_texto {
+  font-size: 2rem;
+  width: 800px;
+}
+
+/* Botões empilhados */
+.slideshow_button {
+  padding-top: 40%;
+  gap: 12px;
+}
+
+/* FIM DA HEADER*/
+
+/*INICIO DA MAIN*/
+.barra-vertical {
+  width: 2px;
+  height: 30px;
+  background-color: #00000066;
+  margin: 0 15px;
+  border-radius: 10px;
+}
+
+.linha-azul {
+  width: 60%;
+  height: 4px;
+  background-color: #3AA0FF;
+  margin: 40px auto;
+  border-radius: 8px;
+}
+
+.intro {
+  padding-top: 20px;
+  font-size: 1.8rem;
+  color: var(--verde-texto);
+  text-align: center;
+  justify-content: center;
+}
+
+.destaque_azul {
+  color: var(--azul-destaque);
+}
+
+/* Removido o h3 genérico aqui, será definido por seções */
+/* h3 {
+  color: var(--verde-texto);
+  font-size: 1.6rem;
+} */
+
+main img {
+  width: 600px;
+  border-radius: 20px;
+}
+
+/* --- SEÇÃO 1 --- */
+#secao1 {
+  padding: 60px 20px;
+}
+
+.secao1_container {
+  display: flex;
+  flex-direction: row; /* Desktop: lado a lado */
+  align-items: center; /* Alinha verticalmente no centro */
+  gap: 30px; /* Espaço entre texto e imagem */
+  flex-wrap: wrap; /* Permite que quebre em telas menores */
+  justify-content: center; /* Centraliza o container no desktop se houver espaço */
+}
+
+.secao1_texto {
+  box-sizing: border-box;
+  padding-left: 20vw; /* Padding para desktop */
+  max-width: 50%;
+  flex: 1;
+  color: var(--font);
+  font-size: 1rem;
+  text-align: left; /* Alinhamento para desktop */
+}
+
+#secao1 h3 {
+  color: var(--verde-texto);
+  font-size: 2rem; /* Este é o ponto de conflito com o mobile */
+}
+
+.secao1_imagem {
+  max-width: 50%;
+  flex: 1;
+  text-align: left; /* Alinhamento para desktop */
+}
+
+/* Estilo base para a imagem da secao1 */
+main .secao1_imagem img {
+  width: 100%; /* Faz a imagem ocupar 100% do seu container */
+  max-width: 600px; /* Limita o tamanho máximo em desktops */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 20px;
+  display: block; /* Remove espaços extras abaixo da imagem */
+  margin: 0 auto; /* Centraliza a imagem no desktop dentro do seu flex item */
+}
+
+/* --- SEÇÃO 2 --- */
+#secao2 {
+  padding: 60px 20px;
+}
+
+.secao2_container {
+  display: flex;
+  flex-direction: row; /* Desktop: lado a lado */
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza o container no desktop se houver espaço */
+}
+
+.secao2_texto {
+  box-sizing: border-box;
+  padding-right: 20vw; /* Padding para desktop */
+  max-width: 50%;
+  flex: 1;
+  color: var(--font);
+  font-size: 1rem;
+  text-align: right; /* Alinhamento para desktop */
+}
+
+#secao2 h3 {
+  color: var(--verde-texto);
+  font-size: 2rem; /* Este é o ponto de conflito com o mobile */
+}
+
+.secao2_imagem {
+  max-width: 50%;
+  flex: 1;
+  text-align: right; /* Alinhamento para desktop */
+}
+
+.secao2_imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto; /* Centraliza a imagem no desktop dentro do seu flex item */
+}
+
+
+/* --- SEÇÃO 3 --- */
+#secao3 {
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+  background-image: url('../assets/imagem_secao3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  padding: 60px 20px;
+  flex-direction: column;
+  justify-content: space-between; /* Ajustado para espaçamento vertical */
+  height: 100%;
+}
+
+#secao3 h3 {
+  font-size: 3.4rem;
+  margin-top: 10vh;
+  text-align: center;
+  color: var(--verde-texto); /* Adicionado cor para consistência */
+}
+
+.secao3_texto {
+  font-size: 1.7rem;
+}
+
+.secao3_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  height: 100%;
+  align-items: center; /* Centraliza itens horizontalmente */
+}
+
+.secao3_paragrafo {
+  box-sizing: border-box;
+  width: 700px;
+  padding-top: 45vh;
+  text-align: center;
+  margin: auto;
+}
+
+.secao3_paragrafo .destaque_azul {
+  color: var(--verde-texto);
+}
+
+/* --- SEÇÃO 4 --- */
+#secao4 {
+  padding: 60px 20px;
+}
+
+.secao4_container {
+  display: flex;
+  flex-direction: row; /* Desktop: lado a lado */
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza o container no desktop se houver espaço */
+}
+
+.secao4_texto {
+  box-sizing: border-box;
+  padding-left: 20vw; /* Padding para desktop */
+  max-width: 50%;
+  flex: 1;
+  color: var(--font);
+  font-size: 1rem;
+  text-align: left; /* Alinhamento para desktop */
+}
+
+#secao4 h3 {
+  color: var(--verde-texto);
+  font-size: 2rem; /* Este é o ponto de conflito com o mobile */
+}
+
+.secao4_imagem {
+  max-width: 50%;
+  flex: 1;
+  text-align: left; /* Alinhamento para desktop */
+}
+
+.secao4_imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto; /* Centraliza a imagem no desktop dentro do seu flex item */
+}
+
+
+/* --- SEÇÃO 5 --- */
+#secao5 {
+  padding: 60px 20px;
+}
+
+.secao5_container {
+  display: flex;
+  flex-direction: row; /* Desktop: lado a lado */
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.secao5_texto {
+  flex: 1;
+  max-width: 50%;
+  color: var(--font);
+  font-size: 1rem;
+  text-align: left; /* Alinhamento para desktop */
+  padding-left: 5vw;
+  box-sizing: border-box;
+}
+
+#secao5 h3 { /* Adicionado para consistência, se tiver h3 nesta seção */
+  color: var(--verde-texto);
+  font-size: 2rem; /* Este é o ponto de conflito com o mobile */
+}
+
+.secao5_imagem {
+  flex: 1;
+  max-width: 50%;
+  text-align: right; /* Alinhamento para desktop */
+}
+
+.secao5_imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto; /* Centraliza a imagem no desktop dentro do seu flex item */
+}
+
+#secao5 li {
+  list-style-type: square;
+}
+
+
+/* --- SEÇÃO 6 --- */
+#secao6 {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+  background-image: url('../assets/imagem_secao6.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  padding: 60px 20px;
+  justify-content: center;
+  align-items: center; /* Centraliza verticalmente no desktop */
+  flex-direction: column; /* Necessário para centralizar h3 e texto */
+}
+
+.secao6_conteudo {
+  max-width: 70%;
+  text-align: center;
+}
+
+#secao6 h3 {
+  font-size: 3.4rem;
+  margin-top: 0;
+  text-align: center;
+  color: var(--verde-texto); /* Adicionado cor para consistência */
+}
+
+.secao6_texto_esquerda {
+  padding-top: 5vh;
+  font-size: 2rem;
+  text-align: left; /* Alinhamento para desktop */
+}
+
+.secao6_texto_container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 100%; /* Ocupa a largura total do secao6_conteudo */
+}
+
+.secao6_texto_esquerda,
+.secao6_texto_direita {
+  flex: 1;
+}
+
+.secao6_texto_direita {
+  margin-right: 0;
+  padding-top: 20vh;
+  text-align: right; /* Alinhamento para desktop */
+  font-size: 1.8rem;
+}
+
+.secao6_texto_direita b {
+  text-align: left;
+}
+
+/* --- SEÇÃO 7 --- */
+#secao7 {
+  padding: 60px 20px;
+}
+
+.secao7_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  gap: 30px;
+}
+
+.secao7_logo img {
+  max-width: 250px;
+  height: auto;
+  /* padding-left: 50vw; - Removido para permitir centralização com align-items */
+  margin: 0 auto; /* Centraliza a imagem se ela for menor que o container */
+}
+
+.secao7_texto {
+  max-width: 50%;
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo (logo e mensagem) */
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  text-align: center; /* Centraliza o texto dentro da div */
+}
+
+.secao7_linha {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* CENTRALIZA VERTICALMENTE */
+  gap: 20px;
+}
+
+.secao7_mensagem {
+  color: var(--font);
+  text-align: center; /* Centraliza a mensagem */
+  font-size: 2.3rem;
+}
+
+.secao7_mensagem h2 {
+  color: var(--verde-texto);
+}
+
+.secao7_button button {
+  box-sizing: border-box;
+  height: 10vh;
+  width: 14vw;
+  margin: 15px;
+  padding: 12px 24px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  color: black;
+  background-color: var(--verde-texto);
+  border-bottom: 7px solid var(--borda);
+}
+
+.secao7_button button:hover {
+  background-color: var(--hover);
+  color: var(--font);
+  border: none;
+  font-size: 1.5rem;
+}
+
+/*FIM DA MAIN*/
+
+/*INICIO DO QUIZ*/
+.secao81 {
+  border-radius: 50px;
+  border: 7px solid var(--borda);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  background-color: var(--verde-texto);
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 5vh;
+}
+
+.secao81 h2 {
+  word-spacing: 5px;
+  color: var(--background);
+  padding-bottom: 3%;
+}
+
+.secao81 h3 {
+  font-weight: 900;
+  letter-spacing: 7px;
+  padding-top: 3%;
+  font-size: 3.4rem;
+  color: var(--background);
+}
+
+#secao8 {
+  padding: 10px;
+  border-radius: 10px;
+  width: 60%;
+  max-width: none;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 6%;
+}
+
+.content {
+  color: var(--font);
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  gap: 10px;
+  align-items: center; /* Centraliza o conteúdo do quiz */
+}
+
+.question {
+  font-size: 1.6rem;
+  color: var(--borda);
+  padding-bottom: 3vh;
+  text-align: center; /* Centraliza a pergunta */
+}
+
+.spnQtd {
+  font-size: 2rem;
+  padding-left: 0; /* Removido padding para centralizar */
+  color: var(--borda);
+  text-align: center; /* Centraliza a quantidade */
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center; /* Centraliza os botões de resposta */
+  width: 100%;
+}
+
+/* REVERTIDO PARA O TAMANHO ORIGINAL */
+#secao8 .answers button {
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  width: 50vw;
+  height: 8vh;
+  padding: 8px 12px;
+  text-align: start; /* Mantido o alinhamento start, conforme seu request */
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: var(--borda);
+  border-bottom: 7px solid #1d3e3a;
+  color: white;
+  font-size: 1.3rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+#secao8 .answers button:hover {
+  border-bottom: none;
+  background-color: var(--hover);
+  font-size: 1.5rem;
+}
+
+.finish {
+  font-size: 1.5rem;
+  color: var(--background);
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.finish button {
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  width: 10vw; /* desktop */
+  max-width: 200px; /* Limite para mobile */
+  height: 10vh;
+  padding: 8px 12px;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: var(--borda);
+  border-bottom: 7px solid var(--borda-iniciar);
+  color: white;
+  font-size: 1.3rem;
+  justify-content: center;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.finish button:hover {
+  border: none;
+  background-color: var(--hover);
+  font-size: 1.5rem;
+}
+
+/*FIM DO QUIZ*/
+
+/*INICIO FORMULARIO*/
+
+/* style contato */
+.contact {
+  background-color: transparent;
+  margin: 90px;
+  display: flex;
+  justify-content: end;
+}
+
+.contact h2 {
+  text-align: center;
+  color: var(--secundary-color);
+  font-size: var(--font-tittle);
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 600px;
+  min-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--secundary-color);
+  box-shadow: 10px 10px 5px 0px #0000004a;
+  border-radius: 10px;
+  font-size: var(--font-size2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.error-message {
+  color: red;
+  font-size: var(--font-size2);
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+#contactForm button {
+  margin-top: 30px;
+  width: 120px;
+  height: 35px;
+  color: var(--secundary-color);
+  background: transparent;
+  border: 2px solid;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#contactForm button:hover {
+  border-radius: 0 10px 0 10px;
+  box-shadow: 0px 0px 10px 2px #ffffff18;
+  transform: scale(1.1);
+}
+
+/*FIM DO FORMULARIO*/
+
+/*FOOTER*/
+footer {
+  background-color: var(--azul-destaque);
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+}
+
+footer .conteudo_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+footer ul {
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+footer img {
+  width: 50px;
+  height: auto;
+}
+
+footer .copyright {
+  margin-top: 40px;
+  color: var(--font);
+  font-size: 1.3rem;
+}
+
+/*FIM DO FOOTER*/
+
+/*RESPONSIVIDADE*/
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  margin-left: 20px;
+}
+
+.hamburger-menu .bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--font);
+  transition: all 0.3s ease;
+}
+
+nav > ul.nav-list {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: static;
+  background-color: transparent;
+  box-shadow: none;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 15px;
+}
+
+nav > ul.nav-list li {
+  margin: 0 10px;
+}
+
+nav > ul.nav-list li > img,
+nav > ul.nav-list li > .barra-vertical {
+  display: inline-block;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  nav > ul.nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--azul-header);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    border-radius: 0 0 10px 10px;
+  }
+
+  nav > ul.nav-list.active {
+    display: flex;
+  }
+
+  nav > ul.nav-list li {
+    margin: 10px 0;
+  }
+
+  nav > ul.nav-list.active li > img,
+  nav > ul.nav-list.active li > .barra-vertical {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+}
+
+/* Ajustes para o logo */
+.nav_home img,
+.slideshow_logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* Garante que o menu mobile não exceda a tela */
+@media (max-width: 768px) {
+  .nav-list.active {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+/*RESPONSIVIDADE DO SLIDESHOW*/
+@media (max-width: 768px) {
+  /* Makes the slideshow container occupy 100% of viewport width and height */
+  .slideshow-container {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* CENTRALIZA TUDO VERTICALMENTE */
+    align-items: center; /* CENTRALIZA TUDO HORIZONTALMENTE */
+    padding-top: 0; /* Remove padding top, já centralizado */
+    box-sizing: border-box;
+  }
+
+  /* Adjusts the image to fill the entire container */
+  .slide_image img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .slideshow_conteudo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza logo, texto, botões horizontalmente */
+    justify-content: center; /* Centraliza logo, texto, botões verticalmente se houver espaço */
+    width: 90vw;
+    max-width: 400px;
+    margin-top: 0; /* Remove margem, já centralizado */
+    z-index: 1;
+    text-align: center;
+  }
+
+  /* Logo adjustment for mobile */
+  .slideshow_logo img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-top: 0;
+  }
+
+  /* Text of the slideshow */
+  .slideshow_texto {
+    position: static;
+    width: 100%;
+    transform: none;
+    font-size: 1.2rem; /* Aumentado um pouco para legibilidade */
+    text-align: center;
+    color: var(--font);
+    padding: 0 0.5rem;
+    line-height: 1.3;
+    margin-bottom: 30px;
+    top: auto;
+    left: auto;
+    z-index: 1;
+  }
+
+  /* Buttons of the slideshow, now below the text */
+  .slideshow_button {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center; /* Centraliza botões horizontalmente */
+    width: 100%;
+    top: auto;
+    left: auto;
+    transform: none;
+    padding-top: 0;
+    z-index: 2;
+  }
+
+  .slideshow_button button {
+    font-size: 1rem; /* Aumentado um pouco para legibilidade */
+    padding: 12px 24px;
+    width: 80%;
+    max-width: 280px; /* Aumentado o max-width para botões maiores */
+    min-width: unset;
+    line-height: 1.2;
+    height: auto;
+  }
+
+  /* Remove any conflicting styles if they exist elsewhere for mobile */
+  .slideshow_text {
+    top: unset;
+    left: unset;
+    transform: unset;
+  }
+}
+
+/*FIM DA RESPONSIVIDADE DO SLIDESHOW*/
+
+/*INICIO RESPONSIVIDADE DA MAIN*/
+
+@media (max-width: 768px) {
+  /* --- SEÇÃO 1 --- */
+
+  h2{
+    font-size: 1.5rem;
+  }
+
+
+  .secao1_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .secao1_texto {
+    width: 100%;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  /* CORREÇÃO AQUI: Adicionei #secao1 para aumentar a especificidade */
+  #secao1 .secao1_texto h3 {
+    font-size: 1.2rem; /* AGORA VAI MUDAR! */
+    text-align: center;
+    margin-bottom: 0.5rem;
+    overflow: visible;
+    display: block;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+  }
+
+  .secao1_texto p {
+    text-align: center;
+    overflow: visible;
+    display: block;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .secao1_imagem {
+    max-width: 100%;
+  }
+
+  .secao1_imagem img {
+    width: 95%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* --- SEÇÃO 2 --- */
+  .secao2_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .secao2_texto {
+    width: 100%;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  /* CORREÇÃO AQUI: Adicionei #secao2 para aumentar a especificidade */
+  #secao2 .secao2_texto h3 {
+    font-size: 1.2rem; /* AGORA VAI MUDAR! */
+    text-align: center;
+    margin-bottom: 0.5rem;
+    overflow: visible;
+    display: block;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+  }
+
+  .secao2_texto p {
+    text-align: center;
+    overflow: visible;
+    display: block;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .secao2_imagem {
+    max-width: 100%;
+  }
+
+  .secao2_imagem img {
+    width: 95%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* --- SEÇÃO 3 --- */
+  #secao3 {
+    min-height: 500px; /* Ajuste para mobile */
+    padding: 30px 15px; /* Ajuste padding */
+  }
+
+  #secao3 h3 {
+    font-size: 2.5rem; /* Diminui a fonte do H3 para mobile */
+    margin-top: 5vh; /* Ajuste de margem */
+    text-align: center;
+  }
+
+  .secao3_texto {
+    font-size: 1.2rem; /* Diminui a fonte do texto */
+    text-align: center; /* Garante centralização */
+  }
+
+  .secao3_container {
+    height: auto; /* Permite que o container se ajuste ao conteúdo */
+    min-height: unset;
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+  }
+
+  .secao3_paragrafo {
+    width: 95%; /* Ocupa mais largura */
+    padding-top: 5vh; /* Ajuste de padding */
+    margin: 0 auto; /* Centraliza */
+    text-align: center;
+  }
+
+  /* --- SEÇÃO 4 --- */
+  .secao4_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .secao4_texto {
+    width: 100%;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  /* CORREÇÃO AQUI: Adicionei #secao4 para aumentar a especificidade */
+  #secao4 .secao4_texto h3 {
+    font-size: 1.2rem; /* AGORA VAI MUDAR! */
+    text-align: center;
+    margin-bottom: 0.5rem;
+    overflow: visible;
+    display: block;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+  }
+
+  .secao4_texto p {
+    text-align: center;
+    overflow: visible;
+    display: block;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .secao4_imagem {
+    max-width: 100%;
+  }
+
+  .secao4_imagem img {
+    width: 95%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* --- SEÇÃO 5 --- */
+  .secao5_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .secao5_texto {
+    width: 100%;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  /* CORREÇÃO AQUI: Adicionei #secao5 para aumentar a especificidade */
+  #secao5 .secao5_texto h3 {
+    font-size: 1.2rem; /* AGORA VAI MUDAR! */
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .secao5_texto p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  #secao5 li {
+    text-align: left;
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  .secao5_imagem {
+    max-width: 100%;
+  }
+
+  .secao5_imagem img {
+    width: 95%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* --- SEÇÃO 6 --- */
+  #secao6 {
+    min-height: 400px; /* Ajuste para mobile */
+    padding: 30px 15px; /* Ajuste padding */
+  }
+
+  #secao6 h3 {
+    font-size: 2.5rem; /* Diminui a fonte do H3 para mobile */
+    text-align: center;
+  }
+
+  .secao6_conteudo {
+    max-width: 95%; /* Ocupa mais largura */
+    text-align: center;
+  }
+
+  .secao6_texto_container {
+    flex-direction: column; /* Empilha as colunas de texto */
+    align-items: center; /* Centraliza as colunas de texto */
+    margin-top: 15px; /* Ajuste de margem */
+  }
+
+  .secao6_texto_esquerda,
+  .secao6_texto_direita {
+    width: 100%; /* Ocupa a largura total */
+    text-align: center; /* Centraliza o texto em ambas as colunas */
+    font-size: 1rem; /* Diminui a fonte */
+    padding-top: 0; /* Remove padding */
+    margin-bottom: 1rem; /* Espaçamento entre as colunas */
+  }
+
+  .secao6_texto_direita {
+    margin-right: 0; /* Remove margem */
+    padding-top: 0; /* Remove padding */
+  }
+
+  .secao6_texto_direita b {
+    text-align: center; /* Centraliza o negrito */
+  }
+
+  /* --- SEÇÃO 7 --- */
+  .secao7_container {
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .secao7_logo img {
+    max-width: 150px; /* Diminui o logo */
+    padding-left: 0; /* Remove padding */
+  }
+
+  .secao7_texto {
+    max-width: 95%; /* Ocupa mais largura */
+    flex-direction: column; /* Empilha o ícone e a mensagem */
+    gap: 1rem; /* Ajuste de espaçamento */
+    text-align: center;
+  }
+
+  .secao7_linha {
+    flex-direction: column; /* Empilha a barra e a mensagem */
+    gap: 1rem;
+  }
+
+  .secao7_mensagem {
+    font-size: 1.5rem; /* Diminui a fonte */
+    text-align: center;
+  }
+
+  .secao7_button button {
+    width: 80%; /* Aumenta o botão */
+    max-width: 300px; /* Limite */
+    height: 8vh; /* Ajuste a altura */
+    font-size: 1rem; /* Diminui a fonte do botão */
+  }
+
+    /* --- SEÇÃO 8 (QUIZ) --- */
+  .secao81 {
+    width: 90%; /* Aumenta a largura do container do quiz */
+    padding: 3vh 1rem 5vh 1rem; /* Ajusta padding */
+    border-radius: 20px; /* Ajusta border-radius */
+  }
+
+  .secao81 h3 {
+    font-size: 2.2rem; /* Diminui a fonte do título do quiz */
+    letter-spacing: 3px; /* Ajusta espaçamento */
+    padding-top: 1.5rem;
+  }
+
+  .secao81 h2 {
+    font-size: 1.2rem; /* Diminui a fonte do subtítulo */
+    padding-bottom: 2%;
+  }
+
+  #secao8 {
+    width: 95%; /* Aumenta a largura do quiz principal */
+    min-height: 200px; /* Ajusta altura mínima */
+    padding-bottom: 3%;
+  }
+
+  .content {
+    width: 95vw; /* Ocupa mais largura */
+    gap: 15px; /* Ajusta espaçamento */
+    align-items: center; /* Centraliza o conteúdo do quiz */
+  }
+
+  .question {
+    font-size: 1.3rem; /* Diminui a fonte da pergunta */
+    padding-bottom: 1.5vh;
+  }
+
+  .spnQtd {
+    font-size: 1.5rem; /* Diminui a fonte da quantidade */
+    padding-left: 0; /* Garante centralização */
+    text-align: center;
+  }
+
+  .answers {
+    align-items: center; /* Centraliza os botões de resposta */
+  }
+
+  #secao8 .answers button {
+    width: 80vw; /* Ajusta a largura para ser responsiva */
+    max-width: 350px; /* Limita a largura máxima dos botões */
+    height: 7vh; /* Ajusta altura */
+    font-size: 1.1rem; /* Diminui a fonte dos botões */
+    text-align: center; /* Centraliza o texto dos botões */
+  }
+
+  #secao8 .answers button:hover {
+  border-bottom: none;
+  background-color: var(--borda);
+  font-size: 1.3rem;
+}
+
+  .finish button {
+    width: 60%; /* Ajusta largura do botão de finalizar */
+    max-width: 250px;
+    height: 8vh;
+    font-size: 1.2rem;
+  }
+
+
+  /*FOOTER MOBILE*/
+  footer {
+    padding: 30px 0;
+  }
+
+  footer ul {
+    gap: 20px; /* Menor espaçamento entre ícones */
+  }
+
+  footer img {
+    width: 40px; /* Menor tamanho dos ícones */
+  }
+
+  footer .copyright {
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+}
