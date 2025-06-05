@@ -4,6 +4,23 @@ function mostrarSlides() { //informa que a função mostrarSlides será a respon
   const slides = document.getElementsByClassName("slide_image"); //pega todos os elementos dessa classe
   const pontos = document.getElementsByClassName("ponto");  //pega todos os elementos dessa classe
 
+  // Theme Switcher
+    const themeButtons = document.querySelectorAll('.theme-btn');
+
+    themeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const theme = this.getAttribute('data-theme');
+            document.documentElement.setAttribute('data-theme', theme);
+
+            // Update active button
+            themeButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            // Save theme preference
+            localStorage.setItem('theme', theme);
+        });
+    });
+
  
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";   //esconde todos os slides
