@@ -55,21 +55,21 @@ a {
   --button:rgb(42, 255, 42);
    --border-button:#3e1d34;
    --hover-quiz:#d238ca;
-   --footer:#f83aff;
+   --footer:#a829ac;
 }
 
 [data-theme="green"] {
     --primary-color: #29cf00;
-    --background:#03004f;
-  --azul-header: #f49dff;
-  --azul-destaque: #f83aff;
-  --verde-texto: #d159f6;
-   --font:white;
-  --border:#783878;
+    --background:#dfdfdf;
+  --azul-header: #8dffe4;
+  --azul-destaque: #19d700;
+  --verde-texto: #00cf18;
+   --font:#2b6800;
+  --border:#387838;
   --button:rgb(42, 255, 42);
-   --border-button:#3e1d34;
-   --hover-quiz:#d238ca;
-   --footer:#f83aff;
+   --border-button:#1d3e27;
+   --hover-quiz:#38d271;
+   --footer:#37bd2d;
 }
 
 /* botao tema */
