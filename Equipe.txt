@@ -3,3 +3,6 @@ Integrantes:
 Camila de Mendonça da Silva - RM: 565491
 Guilherme de Araújo Moreira - RM: 561848
 Yan Breno Barutti Conceição - RM: 566412
+
+Link do repositório:
+--> https://github.com/GS-codestorm/Landing-Page-ARCA
