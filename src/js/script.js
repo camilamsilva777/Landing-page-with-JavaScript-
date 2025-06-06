@@ -5,33 +5,33 @@ function mostrarSlides() { //informa que a função mostrarSlides será a respon
   const pontos = document.getElementsByClassName("ponto");  //pega todos os elementos dessa classe
 
   // Theme Switcher
-    const themeButtons = document.querySelectorAll('.theme-btn');
+  const themeButtons = document.querySelectorAll('.theme-btn');
 
-    themeButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const theme = this.getAttribute('data-theme');
-            document.documentElement.setAttribute('data-theme', theme);
+  themeButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const theme = this.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', theme);
 
-            // Update active button
-            themeButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
+      // Update active button
+      themeButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
 
-            // Save theme preference
-            localStorage.setItem('theme', theme);
-        });
+      // Save theme preference
+      localStorage.setItem('theme', theme);
     });
+  });
 
- 
+
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";   //esconde todos os slides
   }
 
- 
+
   for (let i = 0; i < pontos.length; i++) {
     pontos[i].classList.remove("ativo");    //remove o branco de todas as bolinhas
   }
 
-  
+
   slideIndex++;
   if (slideIndex > slides.length) {
     slideIndex = 1; //aumenta a variavel slideIndex para 1 para aparecer a imagem
@@ -45,7 +45,7 @@ function mostrarSlides() { //informa que a função mostrarSlides será a respon
     pontos[slideIndex - 1].classList.add("ativo");  //adiciona a classe ativo á bolinha, assim mostrando ela
   }
 
- 
+
   setTimeout(mostrarSlides, 3000);  //chama essa função a cada 3s
 }
 
@@ -53,71 +53,71 @@ function mostrarSlides() { //informa que a função mostrarSlides será a respon
 mostrarSlides();    //faz a função funcionar
 
 
-  // Salvar a posição de rolagem antes da atualização
-  window.addEventListener('beforeunload', () => {
-    sessionStorage.setItem('scrollPosition', window.scrollY);
-  });
+// Salvar a posição de rolagem antes da atualização
+window.addEventListener('beforeunload', () => {
+  sessionStorage.setItem('scrollPosition', window.scrollY);
+});
 
-  // Restaurar a posição ao recarregar
-  window.addEventListener('load', () => {
-    const scrollPosition = sessionStorage.getItem('scrollPosition');
-    if (scrollPosition) {
-      window.scrollTo(0, parseInt(scrollPosition));
-    }
-  });
-  
-  
+// Restaurar a posição ao recarregar
+window.addEventListener('load', () => {
+  const scrollPosition = sessionStorage.getItem('scrollPosition');
+  if (scrollPosition) {
+    window.scrollTo(0, parseInt(scrollPosition));
+  }
+});
+
+
 // Código para o menu hamburguer
 document.addEventListener('DOMContentLoaded', () => {
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.slide_image');
-    const pontos = document.querySelectorAll('.ponto');
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide_image');
+  const pontos = document.querySelectorAll('.ponto');
 
-    function showSlide(index) {
-        slides.forEach(slide => slide.style.display = 'none');
-        pontos.forEach(ponto => ponto.classList.remove('ativo'));
-        slides[index].style.display = 'block';
-        pontos[index].classList.add('ativo');
-    }
+  function showSlide(index) {
+    slides.forEach(slide => slide.style.display = 'none');
+    pontos.forEach(ponto => ponto.classList.remove('ativo'));
+    slides[index].style.display = 'block';
+    pontos[index].classList.add('ativo');
+  }
 
-    function nextSlide() {
-        slideIndex = (slideIndex + 1) % slides.length;
-        showSlide(slideIndex);
-    }
+  function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+  }
 
-    // Inicia automaticamente
-    let interval = setInterval(nextSlide, 3000);
+  // Inicia automaticamente
+  let interval = setInterval(nextSlide, 3000);
 
-    // Controles das bolinhas
-    pontos.forEach((ponto, i) => {
-        ponto.addEventListener('click', () => {
-            clearInterval(interval);
-            slideIndex = i;
-            showSlide(slideIndex);
-            interval = setInterval(nextSlide, 3000);
-        });
+  // Controles das bolinhas
+  pontos.forEach((ponto, i) => {
+    ponto.addEventListener('click', () => {
+      clearInterval(interval);
+      slideIndex = i;
+      showSlide(slideIndex);
+      interval = setInterval(nextSlide, 3000);
     });
+  });
 });
 
 // hamburguer_script.js
 document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.getElementById('hamburger-menu');
-    const navList = document.getElementById('nav-list');
+  const hamburger = document.getElementById('hamburger-menu');
+  const navList = document.getElementById('nav-list');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navList.classList.toggle('active');
-    });
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navList.classList.toggle('active');
+  });
 
-    // Fecha ao clicar em links
-    navList.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                hamburger.classList.remove('active');
-                navList.classList.remove('active');
-            }
-        });
+  // Fecha ao clicar em links
+  navList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        hamburger.classList.remove('active');
+        navList.classList.remove('active');
+      }
     });
+  });
 });
 
 //COMANDOS DO QUIZ
@@ -130,7 +130,7 @@ const content = document.querySelector(".content");   //container do quiz
 const contentFinish = document.querySelector(".finish");    //quiz ja finalizado
 const btnRestart = document.querySelector(".finish button");    //botao que recomeça o quiz
 
-import questions from "./questoes.js";    //importa as perguntas de outro arquivo
+import questions from "./questoes.js"; //importa as perguntas de outro arquivo
 
 let currentIndex = 0;   //em qual pergunta está
 let questionsCorrect = 0;   //quantidade de questoes acertadas ate o momento
@@ -147,7 +147,7 @@ btnRestart.onclick = () => {
 function nextQuestion(e) {
   if (e.target.getAttribute("data-correct") === "true") {
     questionsCorrect++;                                     //verifica se a resposta escolhida é a correta, se há perguntasd, passa pra proxima
-  }                                                       
+  }
 
   if (currentIndex < questions.length - 1) {
     currentIndex++;
@@ -187,3 +187,36 @@ function loadQuestion() {
 }
 
 loadQuestion();
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('section[id]'); // Select all sections with an ID
+  const navLinks = document.querySelectorAll('.nav_list li a');
+
+  function highlightNavLink() {
+    let currentActive = null;
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - nav.offsetHeight - 20; // Adjust for nav height and some offset
+      const sectionBottom = sectionTop + section.offsetHeight;
+
+      if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+        currentActive = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active-link'); // Remove active class from all links first
+      if (link.getAttribute('href').includes(currentActive)) {
+        link.classList.add('active-link'); // Add active class to the current section's link
+      }
+    });
+  }
+
+  // Call the function on scroll and on load
+  window.addEventListener('scroll', highlightNavLink);
+  highlightNavLink(); // Call it once on page load to set the initial active link
+});
