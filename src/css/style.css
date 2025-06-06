@@ -822,6 +822,78 @@ main .secao1_imagem img {
 
 /*FIM DO QUIZ*/
 
+/*FORMULARIO*/
+
+/* style contato */
+.contact {
+    background-color: transparent;
+    margin: 90px;
+    display: flex;
+    justify-content: end;
+}
+
+.contact h2 {
+    text-align: center;
+    color: var(--secundary-color);
+    font-size: var(--font-tittle);
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    min-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--secundary-color);
+    box-shadow: 10px 10px 5px 0px #0000004a;
+    border-radius: 10px;
+    font-size: var(--font-size2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.error-message {
+    color: red;
+    font-size: var(--font-size2);
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#contactForm button {
+    margin-top: 30px;
+    width: 120px;
+    height: 35px;
+    color: var(--secundary-color);
+    background: transparent;
+    border: 2px solid;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#contactForm button:hover {
+    border-radius: 0 10px 0 10px;
+    box-shadow: 0px 0px 10px 2px #ffffff18;
+    transform: scale(1.1);
+}
+
+
 /*FOOTER*/
 footer {
   background-color: var(--footer);
@@ -1444,7 +1516,7 @@ nav > ul.nav-list li > .barra-vertical {
 
     /* style contato */
 .contact {
-    background-color: rgb(242, 255, 0);
+    background-color: transparent;
     margin: 90px;
     display: flex;
     justify-content: end;
@@ -1452,8 +1524,8 @@ nav > ul.nav-list li > .barra-vertical {
 
 .contact h2 {
     text-align: center;
-    color: var(--font);
-    font-size: var(--verde-texto);
+    color: var(--secundary-color);
+    font-size: var(--font-tittle);
     font-weight: 500;
     margin-bottom: 30px;
 }
@@ -1476,7 +1548,7 @@ form {
 .form-group textarea {
     width: 100%;
     padding: 15px;
-    border: 1px solid var(--font);
+    border: 1px solid var(--secundary-color);
     box-shadow: 10px 10px 5px 0px #0000004a;
     border-radius: 10px;
     font-size: var(--font-size2);
@@ -1485,10 +1557,6 @@ form {
 .form-group textarea {
     resize: vertical;
     min-height: 150px;
-}
-
-.logo_formulario{
-  width: 100px;
 }
 
 .error-message {
@@ -1502,7 +1570,7 @@ form {
     margin-top: 30px;
     width: 120px;
     height: 35px;
-    color: var(--font);
+    color: var(--secundary-color);
     background: transparent;
     border: 2px solid;
     cursor: pointer;
@@ -1514,8 +1582,6 @@ form {
     box-shadow: 0px 0px 10px 2px #ffffff18;
     transform: scale(1.1);
 }
-
-
   /*FOOTER MOBILE*/
   footer {
     padding: 30px 0;
