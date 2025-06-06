@@ -993,7 +993,7 @@ footer .copyright {
 
 
 /* --- INICIO RESPONSIVIDADE GERAL PARA MOBILE (768px) --- */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
   nav > ul.nav-list {
   display: flex;
@@ -1026,7 +1026,7 @@ nav > ul.nav-list li > .barra-vertical {
   height: auto;
 }
   /* Garante que o menu mobile não exceda a tela */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   nav > ul.nav-list {
     display: flex;
     flex-direction: column;
@@ -1061,7 +1061,7 @@ nav > ul.nav-list li > .barra-vertical {
   }
 
  
-  @media (max-width: 768px){
+  @media (max-width: 1024px){
       #nav-list .barra-vertical{
     display: none;
   }
