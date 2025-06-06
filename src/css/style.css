@@ -5,7 +5,7 @@
 }
 
 /*ESTILIZAÇÃO GERAL*/
-body{
+body {
   margin: 0;
   padding: 0;
   font-family: 'FeatherBold', sans-serif;
@@ -36,91 +36,94 @@ a {
   --hover-quiz:#2bac9d;
   --footer:#3AA0FF;
   --font-tittle: 2.1rem;
-    --font-tittle2: 1.3rem;
-    --font-size: 1.1rem;
-    --font-size2: 0.9rem;
-    --font-size3: 0.7rem;
+  --font-tittle2: 1.3rem;
+  --font-size: 1.1rem;
+  --font-size2: 0.9rem;
+  --font-size3: 0.7rem;
+  --secundary-color: #000000; /* Definição de cor secundária para o formulário */
+  --transition: 0.3s ease-in-out; /* Definição de transição */
 }
 
 /*OUTROS TEMAS PARA O SITE*/
-
 [data-theme="yellow"] {
   --primary-color: #ed00f5;
   --background:#03004f;
   --azul-header: #f49dff;
   --azul-destaque: #f83aff;
   --verde-texto: #d159f6;
-   --font:white;
+  --font:white;
   --border:#783878;
   --button:rgb(42, 255, 42);
-   --border-button:#3e1d34;
-   --hover-quiz:#d238ca;
-   --footer:#a829ac;
+  --border-button:#3e1d34;
+  --hover-quiz:#d238ca;
+  --footer:#a829ac;
+  --secundary-color: #d159f6; /* Ajuste para o tema yellow */
 }
 
 [data-theme="green"] {
-    --primary-color: #29cf00;
-    --background:#dfdfdf;
+  --primary-color: #29cf00;
+  --background:#dfdfdf;
   --azul-header: #8dffe4;
   --azul-destaque: #19d700;
   --verde-texto: #00cf18;
-   --font:#2b6800;
+  --font:#2b6800;
   --border:#387838;
   --button:rgb(42, 255, 42);
-   --border-button:#1d3e27;
-   --hover-quiz:#38d271;
-   --footer:#37bd2d;
+  --border-button:#1d3e27;
+  --hover-quiz:#38d271;
+  --footer:#37bd2d;
+  --secundary-color: #2b6800; /* Ajuste para o tema green */
 }
 
 /* botao tema */
 .theme-switcher {
-    margin-bottom: 200px;
-    background-color: var(--color-gen);
-    position: fixed;
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    gap: 10px;
-    z-index: 1;
+  margin-bottom: 200px;
+  background-color: var(--color-gen);
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 1;
 }
 
 .theme-switcher h1 {
-    font-size: var(--font-size2);
+  font-size: var(--font-size2);
 }
 
 .theme-btn {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 0px;
-    cursor: pointer;
-    box-shadow: 0px 0px 7px 2px #00000025;
-    transition: var(--transition);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 0px;
+  cursor: pointer;
+  box-shadow: 0px 0px 7px 2px #00000025;
+  transition: var(--transition);
 }
 
 .theme-btn.red {
-    background-color: #10dbf6;
+  background-color: #10dbf6;
 }
 
 .theme-btn.yellow {
-    background-color: #ed00f5;
+  background-color: #ed00f5;
 }
 
 .theme-btn.green {
-    background-color: #29cf00;
+  background-color: #29cf00;
 }
 
 .theme-btn.active {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-/* INICIO DA HEADER*/
+/* INICIO DA HEADER (Se usado em outras páginas) */
 header {
   position: relative;
   height: auto;
 }
 
-/*NAV*/
+/*NAV (Se usado em outras páginas)*/
 nav {
   position: fixed;
   display: flex;
@@ -130,17 +133,17 @@ nav {
   padding-left: 20px;
   height: auto;
   border-bottom: 9px solid var(--azul-destaque);
-  top: 40px; /* Adicionado aqui para evitar duplicidade */
+  top: 40px;
   border-radius: 50px;
   z-index: 100;
   overflow: visible;
   height: 60px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 16px 24px; /* Unificado */
+  padding: 16px 24px;
 }
 
-.nav-list {
+.nav-list { /* Corrigido de .nav_list para .nav-list */
   display: flex;
   align-items: center;
   gap: 60px;
@@ -149,7 +152,7 @@ nav {
   padding: 0 0px;
 }
 
-.nav-list li a {
+.nav-list li a { /* Corrigido de .nav_list para .nav-list */
   color: rgb(0, 0, 0);
   font-size: 1.5rem;
 }
@@ -165,7 +168,13 @@ nav a:hover {
   transition: 0.3s ease-in-out;
 }
 
-/*SLIDESHOW*/
+.nav-list li a.active-link { /* Corrigido de .nav_list para .nav-list */
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: var(--azul-destaque);
+}
+
+/*SLIDESHOW (Se usado em outras páginas)*/
 .slideshow-container {
   position: relative;
   max-width: 100%;
@@ -297,7 +306,7 @@ nav a:hover {
 
 /* FIM DA HEADER*/
 
-/*INICIO DA MAIN*/
+/*INICIO DA MAIN (Seções Principais, se usadas em outras páginas)*/
 .barra-vertical {
   width: 2px;
   height: 30px;
@@ -325,12 +334,6 @@ nav a:hover {
 .destaque_azul {
   color: var(--azul-destaque);
 }
-
-/* Removido o h3 genérico aqui, será definido por seções */
-/* h3 {
-  color: var(--verde-texto);
-  font-size: 1.6rem;
-} */
 
 main img {
   width: 600px;
@@ -363,7 +366,7 @@ main img {
 
 #secao1 h3 {
   color: var(--verde-texto);
-  font-size: 2rem; /* Este é o ponto de conflito com o mobile */
+  font-size: 2rem;
 }
 
 .secao1_imagem {
@@ -372,14 +375,13 @@ main img {
   text-align: left; /* Alinhamento para desktop */
 }
 
-/* Estilo base para a imagem da secao1 */
 main .secao1_imagem img {
-  width: 100%; /* Faz a imagem ocupar 100% do seu container */
-  max-width: 600px; /* Limita o tamanho máximo em desktops */
-  height: auto; /* Mantém a proporção da imagem */
+  width: 100%;
+  max-width: 600px;
+  height: auto;
   border-radius: 20px;
-  display: block; /* Remove espaços extras abaixo da imagem */
-  margin: 0 auto; /* Centraliza a imagem no desktop dentro do seu flex item */
+  display: block;
+  margin: 0 auto;
 }
 
 /* --- SEÇÃO 2 --- */
@@ -393,7 +395,7 @@ main .secao1_imagem img {
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
-  justify-content: center; /* Centraliza o container no desktop se houver espaço */
+  justify-content: center;
 }
 
 .secao2_texto {
@@ -401,20 +403,20 @@ main .secao1_imagem img {
   padding-right: 20vw; /* Padding para desktop */
   max-width: 50%;
   flex: 1;
-  color:  var(--font);
+  color: var(--font);
   font-size: 1rem;
-  text-align: right; /* Alinhamento para desktop */
+  text-align: right;
 }
 
 #secao2 h3 {
   color: var(--verde-texto);
-  font-size: 2rem; /* Este é o ponto de conflito com o mobile */
+  font-size: 2rem;
 }
 
 .secao2_imagem {
   max-width: 50%;
   flex: 1;
-  text-align: right; /* Alinhamento para desktop */
+  text-align: right;
 }
 
 .secao2_imagem img {
@@ -422,7 +424,7 @@ main .secao1_imagem img {
   height: auto;
   border-radius: 20px;
   display: block;
-  margin: 0 auto; /* Centraliza a imagem no desktop dentro do seu flex item */
+  margin: 0 auto;
 }
 
 
@@ -438,7 +440,7 @@ main .secao1_imagem img {
   display: flex;
   padding: 60px 20px;
   flex-direction: column;
-  justify-content: space-between; /* Ajustado para espaçamento vertical */
+  justify-content: space-between;
   height: 100%;
 }
 
@@ -446,7 +448,7 @@ main .secao1_imagem img {
   font-size: 3.4rem;
   margin-top: 10vh;
   text-align: center;
-  color: var(--verde-texto); /* Adicionado cor para consistência */
+  color: var(--verde-texto);
 }
 
 .secao3_texto {
@@ -459,7 +461,7 @@ main .secao1_imagem img {
   justify-content: space-between;
   min-height: 100%;
   height: 100%;
-  align-items: center; /* Centraliza itens horizontalmente */
+  align-items: center;
 }
 
 .secao3_paragrafo {
@@ -485,28 +487,28 @@ main .secao1_imagem img {
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
-  justify-content: center; /* Centraliza o container no desktop se houver espaço */
+  justify-content: center;
 }
 
 .secao4_texto {
   box-sizing: border-box;
-  padding-left: 20vw; /* Padding para desktop */
+  padding-left: 20vw;
   max-width: 50%;
   flex: 1;
-  color:  var(--font);
+  color: var(--font);
   font-size: 1rem;
-  text-align: left; /* Alinhamento para desktop */
+  text-align: left;
 }
 
 #secao4 h3 {
   color: var(--verde-texto);
-  font-size: 2rem; /* Este é o ponto de conflito com o mobile */
+  font-size: 2rem;
 }
 
 .secao4_imagem {
   max-width: 50%;
   flex: 1;
-  text-align: left; /* Alinhamento para desktop */
+  text-align: left;
 }
 
 .secao4_imagem img {
@@ -514,7 +516,7 @@ main .secao1_imagem img {
   height: auto;
   border-radius: 20px;
   display: block;
-  margin: 0 auto; /* Centraliza a imagem no desktop dentro do seu flex item */
+  margin: 0 auto;
 }
 
 
@@ -535,22 +537,22 @@ main .secao1_imagem img {
 .secao5_texto {
   flex: 1;
   max-width: 50%;
-  color:  var(--font);
+  color: var(--font);
   font-size: 1rem;
-  text-align: left; /* Alinhamento para desktop */
+  text-align: left;
   padding-left: 5vw;
   box-sizing: border-box;
 }
 
-#secao5 h3 { /* Adicionado para consistência, se tiver h3 nesta seção */
+#secao5 h3 {
   color: var(--verde-texto);
-  font-size: 2rem; /* Este é o ponto de conflito com o mobile */
+  font-size: 2rem;
 }
 
 .secao5_imagem {
   flex: 1;
   max-width: 50%;
-  text-align: right; /* Alinhamento para desktop */
+  text-align: right;
 }
 
 .secao5_imagem img {
@@ -558,7 +560,7 @@ main .secao1_imagem img {
   height: auto;
   border-radius: 20px;
   display: block;
-  margin: 0 auto; /* Centraliza a imagem no desktop dentro do seu flex item */
+  margin: 0 auto;
 }
 
 #secao5 li {
@@ -578,8 +580,8 @@ main .secao1_imagem img {
   display: flex;
   padding: 60px 20px;
   justify-content: center;
-  align-items: center; /* Centraliza verticalmente no desktop */
-  flex-direction: column; /* Necessário para centralizar h3 e texto */
+  align-items: center;
+  flex-direction: column;
 }
 
 .secao6_conteudo {
@@ -591,20 +593,20 @@ main .secao1_imagem img {
   font-size: 3.4rem;
   margin-top: 0;
   text-align: center;
-  color: var(--verde-texto); /* Adicionado cor para consistência */
+  color: var(--verde-texto);
 }
 
 .secao6_texto_esquerda {
   padding-top: 5vh;
   font-size: 2rem;
-  text-align: left; /* Alinhamento para desktop */
+  text-align: left;
 }
 
 .secao6_texto_container {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
-  width: 100%; /* Ocupa a largura total do secao6_conteudo */
+  width: 100%;
 }
 
 .secao6_texto_esquerda,
@@ -615,7 +617,7 @@ main .secao1_imagem img {
 .secao6_texto_direita {
   margin-right: 0;
   padding-top: 20vh;
-  text-align: right; /* Alinhamento para desktop */
+  text-align: right;
   font-size: 1.8rem;
 }
 
@@ -631,37 +633,36 @@ main .secao1_imagem img {
 .secao7_container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza horizontalmente */
+  align-items: center;
   gap: 30px;
 }
 
 .secao7_logo img {
   max-width: 250px;
   height: auto;
-  /* padding-left: 50vw; - Removido para permitir centralização com align-items */
-  margin: 0 auto; /* Centraliza a imagem se ela for menor que o container */
+  margin: 0 auto;
 }
 
 .secao7_texto {
   max-width: 50%;
   display: flex;
-  justify-content: center; /* Centraliza o conteúdo (logo e mensagem) */
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 20px;
-  text-align: center; /* Centraliza o texto dentro da div */
+  text-align: center;
 }
 
 .secao7_linha {
   display: flex;
   flex-direction: row;
-  align-items: center; /* CENTRALIZA VERTICALMENTE */
+  align-items: center;
   gap: 20px;
 }
 
 .secao7_mensagem {
-  color:  var(--font);
-  text-align: center; /* Centraliza a mensagem */
+  color: var(--font);
+  text-align: center;
   font-size: 2.3rem;
 }
 
@@ -693,7 +694,7 @@ main .secao1_imagem img {
 
 /*FIM DA MAIN*/
 
-/*INICIO DO QUIZ*/
+/*INICIO DO QUIZ (Se usado em outras páginas)*/
 .secao81 {
   border-radius: 50px;
   border: 7px solid var(--border);
@@ -741,38 +742,37 @@ main .secao1_imagem img {
   flex-direction: column;
   width: 60vw;
   gap: 10px;
-  align-items: center; /* Centraliza o conteúdo do quiz */
+  align-items: center;
 }
 
 .question {
   font-size: 1.6rem;
   color: var(--border);
   padding-bottom: 3vh;
-  text-align: center; /* Centraliza a pergunta */
+  text-align: center;
 }
 
 .spnQtd {
   font-size: 2rem;
-  padding-left: 0; /* Removido padding para centralizar */
+  padding-left: 0;
   color: var(--border);
-  text-align: center; /* Centraliza a quantidade */
+  text-align: center;
 }
 
 .answers {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  align-items: center; /* Centraliza os botões de resposta */
+  align-items: center;
   width: 100%;
 }
 
-/* REVERTIDO PARA O TAMANHO ORIGINAL */
 #secao8 .answers button {
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
   width: 50vw;
   height: 8vh;
   padding: 8px 12px;
-  text-align: start; /* Mantido o alinhamento start, conforme seu request */
+  text-align: start;
   border-radius: 20px;
   cursor: pointer;
   background-color: var(--border);
@@ -799,8 +799,8 @@ main .secao1_imagem img {
 
 .finish button {
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  width: 10vw; /* desktop */
-  max-width: 200px; /* Limite para mobile */
+  width: 10vw;
+  max-width: 200px;
   height: 10vh;
   padding: 8px 12px;
   text-align: center;
@@ -822,106 +822,127 @@ main .secao1_imagem img {
 
 /*FIM DO QUIZ*/
 
-/*FORMULARIO*/
+/*FORMULARIO (Estilos Desktop)*/
 
-/* style contato */
 
-.img_form{
-    width: 100px; /* Faz a imagem ocupar 100% do seu container */
-  
+.hero {
+  /* Garante que o hero section se comporte como flex container para o logo e o formulário */
+  display: flex;
+  flex-direction: column; /* Alinha o logo e o formulário verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  margin: 90px auto; /* Centraliza a seção hero e adiciona margens */
+  max-width: 800px; /* Limite a largura para desktop */
+  padding: 20px; /* Adiciona padding interno */
+  box-sizing: border-box;
 }
 
-
-/* Aplique o background ao body com o ID "contato" */
-body#contato { /* Maior especificidade e claro que é para o body */
-  background-image: url('../assets/imagem_secao3.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  /* Opcional: Para garantir que o background cubra todo o viewport, mesmo com pouco conteúdo */
-  min-height: 100vh;
-  overflow-y: hidden;
+.img_form {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto 50px auto; /* Adiciona margem inferior para separar do formulário */
 }
 
-/* Seção de Contato - Remova o background que sobrepõe */
+.img_form img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+}
+
 .contact {
-    background-color: transparent; /* Mantenha transparente para ver o background do body */
-    margin: 90px;
-    display: flex;
-    justify-content: center;
-    /* Verifique se não há nenhum background-image ou color aqui que esteja cobrindo o background do body */
-}
-
-.contact {
-    background-color: transparent;
-    margin: 90px;
-    display: flex;
-    justify-content: center;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* Garante que o H2 e o Form fiquem um abaixo do outro */
+  align-items: center; /* Centraliza H2 e Form */
+  width: 100%; /* Permite que a section contact ocupe a largura do hero */
+  box-sizing: border-box;
 }
 
 .contact h2 {
-    text-align: center;
-    color: var(--secundary-color);
-    font-size: var(--font-tittle);
-    font-weight: 500;
-    margin-bottom: 30px;
+  text-align: center;
+  color: white;
+  font-size: var(--font-tittle);
+  font-weight: 500;
+  margin-bottom: 30px;
 }
 
 form {
-    max-width: 600px;
-    min-width: 600px;
-    margin: 0 auto;
+  max-width: 600px;
+  min-width: 600px; /* Este será sobrescrito no mobile */
+  width: 100%; /* Garante que o form preencha o max-width */
+  margin: 0 auto; /* Centraliza o formulário */
+  box-sizing: border-box;
+  padding: 0 20px; /* Padding para os lados no desktop */
 }
 
 .form-group {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza os inputs dentro do form-group */
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid var(--secundary-color);
-    box-shadow: 10px 10px 5px 0px #0000004a;
-    border-radius: 10px;
-    font-size: var(--font-size2);
+  width: 100%; /* Ocupa a largura do form-group */
+  padding: 15px;
+  border: 5px solid var(--verde-texto);
+  box-shadow: 10px 10px 5px 0px #0000004a;
+  border-radius: 10px;
+  font-size: var(--font-size2);
+  box-sizing: border-box; /* Garante que padding não adicione largura */
+  background-color: white;
 }
 
 .form-group textarea {
-    resize: vertical;
-    min-height: 150px;
+  resize: vertical;
+  min-height: 150px;
+  background-color: white;
 }
 
 .error-message {
-    color: red;
-    font-size: var(--font-size2);
-    margin-left: 10px;
-    margin-top: 5px;
+  color: red;
+  font-size: var(--font-size2);
+  margin-left: 10px;
+  margin-top: 5px;
+  align-self: flex-start; /* Alinha mensagens de erro à esquerda */
 }
 
 #contactForm button {
-    margin-top: 30px;
-    width: 120px;
-    height: 35px;
-    color: var(--secundary-color);
-    background: transparent;
-    border: 2px solid;
-    cursor: pointer;
-    transition: var(--transition);
+  margin-top: 30px;
+  width: 120px;
+  height: 35px;
+  color: var(--verde-texto);
+  background: transparent;
+  border: 2px solid;
+  cursor: pointer;
+  transition: var(--transition);
 }
 
 #contactForm button:hover {
-    border-radius: 0 10px 0 10px;
-    box-shadow: 0px 0px 10px 2px #ffffff18;
-    transform: scale(1.1);
+  border-radius: 0 10px 0 10px;
+  box-shadow: 0px 0px 10px 2px #ffffff18;
+  transform: scale(1.1);
+}
+
+/* Background da página de contato */
+body#contato {
+  background-image: url('../assets/imagem_secao3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Garante que o background cubra a tela toda */
+  overflow-y: hidden; /* Oculta a barra de rolagem vertical */
 }
 
 
-/*FOOTER*/
+/*FOOTER (Se usado em outras páginas)*/
 footer {
   background-color: var(--footer);
   width: 100%;
@@ -957,7 +978,7 @@ footer .copyright {
 
 /*FIM DO FOOTER*/
 
-/*RESPONSIVIDADE*/
+/*RESPONSIVIDADE (Se usado em outras páginas)*/
 .hamburger-menu {
   display: none;
   cursor: pointer;
@@ -999,56 +1020,6 @@ nav > ul.nav-list li > .barra-vertical {
   margin: 0;
 }
 
-@media (max-width: 768px) {
-  nav > ul.nav-list {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--azul-header);
-    position: absolute;
-    top: 60px;
-    left: 0;
-    text-align: center;
-    padding: 10px 0;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 99;
-    border-radius: 0 0 10px 10px;
-  }
-
-  nav > ul.nav-list.active {
-    display: flex;
-  }
-
-  nav > ul.nav-list li {
-    margin: 10px 0;
-  }
-
-  nav > ul.nav-list.active li > img,
-  nav > ul.nav-list.active li > .barra-vertical {
-    display: none;
-  }
-
-  .hamburger-menu {
-    display: flex;
-  }
-
-  .hamburger-menu.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hamburger-menu.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger-menu.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  nav {
-    justify-content: space-between;
-  }
-}
-
 /* Ajustes para o logo */
 .nav_home img,
 .slideshow_logo img {
@@ -1056,593 +1027,501 @@ nav > ul.nav-list li > .barra-vertical {
   height: auto;
 }
 
-/* Garante que o menu mobile não exceda a tela */
+
+/* --- INICIO RESPONSIVIDADE GERAL PARA MOBILE (768px) --- */
 @media (max-width: 768px) {
+  /* Garante que o menu mobile não exceda a tela */
   .nav-list.active {
-    max-height: 100vh;
-    overflow-y: auto;
+      max-height: 100vh;
+      overflow-y: auto;
   }
-}
 
-/*RESPONSIVIDADE DO SLIDESHOW*/
-@media (max-width: 768px) {
-  /* Makes the slideshow container occupy 100% of viewport width and height */
+  nav > ul.nav-list {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: var(--azul-header);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      text-align: center;
+      padding: 10px 0;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 99;
+      border-radius: 0 0 10px 10px;
+  }
+
+  nav > ul.nav-list.active {
+      display: flex;
+  }
+
+  nav > ul.nav-list li {
+      margin: 10px 0;
+  }
+
+  nav > ul.nav-list.active li > img,
+  nav > ul.nav-list.active li > .barra-vertical {
+      display: none;
+  }
+
+  .hamburger-menu {
+      display: flex;
+  }
+
+  .hamburger-menu.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger-menu.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger-menu.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+
+  nav {
+      justify-content: space-between;
+  }
+
+  /*RESPONSIVIDADE DO SLIDESHOW*/
   .slideshow-container {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    transform: none;
-    border-radius: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* CENTRALIZA TUDO VERTICALMENTE */
-    align-items: center; /* CENTRALIZA TUDO HORIZONTALMENTE */
-    padding-top: 0; /* Remove padding top, já centralizado */
-    box-sizing: border-box;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      transform: none;
+      border-radius: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0;
+      box-sizing: border-box;
   }
 
-  /* Adjusts the image to fill the entire container */
   .slide_image img {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
   }
 
   .slideshow_conteudo {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza logo, texto, botões horizontalmente */
-    justify-content: center; /* Centraliza logo, texto, botões verticalmente se houver espaço */
-    width: 90vw;
-    max-width: 400px;
-    margin-top: 0; /* Remove margem, já centralizado */
-    z-index: 1;
-    text-align: center;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 90vw;
+      max-width: 400px;
+      margin-top: 0;
+      z-index: 1;
+      text-align: center;
   }
 
-  /* Logo adjustment for mobile */
   .slideshow_logo img {
-    width: 150px;
-    height: auto;
-    margin-bottom: 20px;
-    padding: 0;
-    padding-top: 0;
+      width: 150px;
+      height: auto;
+      margin-bottom: 20px;
+      padding: 0;
+      padding-top: 0;
   }
 
-  /* Text of the slideshow */
   .slideshow_texto {
-    position: static;
-    width: 100%;
-    transform: none;
-    font-size: 1.2rem; /* Aumentado um pouco para legibilidade */
-    text-align: center;
-    color: var(--font);
-    padding: 0 0.5rem;
-    line-height: 1.3;
-    margin-bottom: 30px;
-    top: auto;
-    left: auto;
-    z-index: 1;
+      position: static;
+      width: 100%;
+      transform: none;
+      font-size: 1.2rem;
+      text-align: center;
+      color: var(--font);
+      padding: 0 0.5rem;
+      line-height: 1.3;
+      margin-bottom: 30px;
+      top: auto;
+      left: auto;
+      z-index: 1;
   }
 
-  /* Buttons of the slideshow, now below the text */
   .slideshow_button {
-    position: static;
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    align-items: center; /* Centraliza botões horizontalmente */
-    width: 100%;
-    top: auto;
-    left: auto;
-    transform: none;
-    padding-top: 0;
-    z-index: 2;
+      position: static;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      align-items: center;
+      width: 100%;
+      top: auto;
+      left: auto;
+      transform: none;
+      padding-top: 0;
+      z-index: 2;
   }
 
   .slideshow_button button {
-    font-size: 1rem; /* Aumentado um pouco para legibilidade */
-    padding: 12px 24px;
-    width: 80%;
-    max-width: 280px; /* Aumentado o max-width para botões maiores */
-    min-width: unset;
-    line-height: 1.2;
-    height: auto;
+      font-size: 1rem;
+      padding: 12px 24px;
+      width: 80%;
+      max-width: 280px;
+      min-width: unset;
+      line-height: 1.2;
+      height: auto;
   }
 
-  /* Remove any conflicting styles if they exist elsewhere for mobile */
   .slideshow_text {
-    top: unset;
-    left: unset;
-    transform: unset;
-  }
-}
-
-/*FIM DA RESPONSIVIDADE DO SLIDESHOW*/
-
-/*INICIO RESPONSIVIDADE DA MAIN*/
-
-@media (max-width: 768px) {
-  /* --- SEÇÃO 1 --- */
-
-  h2{
-    font-size: 1.5rem;
+      top: unset;
+      left: unset;
+      transform: unset;
   }
 
+  /*FIM DA RESPONSIVIDADE DO SLIDESHOW*/
 
-  .secao1_container {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem 1rem;
+  /*INICIO RESPONSIVIDADE DA MAIN*/
+  h2 {
+      font-size: 1.5rem;
   }
 
-  .secao1_texto {
-    width: 100%;
-    max-width: none;
-    padding-left: 0;
-    padding-right: 0;
-    text-align: center;
+  .secao1_container,
+  .secao2_container,
+  .secao4_container,
+  .secao5_container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.5rem 1rem;
   }
 
-  /* CORREÇÃO AQUI: Adicionei #secao1 para aumentar a especificidade */
-  #secao1 .secao1_texto h3 {
-    font-size: 1.2rem; /* AGORA VAI MUDAR! */
-    text-align: center;
-    margin-bottom: 0.5rem;
-    overflow: visible;
-    display: block;
-    -webkit-line-clamp: unset;
-    -webkit-box-orient: unset;
+  .secao1_texto,
+  .secao2_texto,
+  .secao4_texto,
+  .secao5_texto {
+      width: 100%;
+      max-width: none;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
   }
 
-  .secao1_texto p {
-    text-align: center;
-    overflow: visible;
-    display: block;
-    -webkit-line-clamp: unset;
-    -webkit-box-orient: unset;
-    font-size: 1rem;
-    margin-bottom: 0;
+  #secao1 .secao1_texto h3,
+  #secao2 .secao2_texto h3,
+  #secao4 .secao4_texto h3,
+  #secao5 .secao5_texto h3 {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      overflow: visible;
+      display: block;
+      -webkit-line-clamp: unset;
+      -webkit-box-orient: unset;
   }
 
-  .secao1_imagem {
-    max-width: 100%;
+  .secao1_texto p,
+  .secao2_texto p,
+  .secao4_texto p,
+  .secao5_texto p {
+      text-align: center;
+      overflow: visible;
+      display: block;
+      -webkit-line-clamp: unset;
+      -webkit-box-orient: unset;
+      font-size: 1rem;
+      margin-bottom: 0;
   }
 
-  .secao1_imagem img {
-    width: 95%;
-    max-width: 500px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+  .secao1_imagem,
+  .secao2_imagem,
+  .secao4_imagem,
+  .secao5_imagem {
+      max-width: 100%;
   }
 
-  /* --- SEÇÃO 2 --- */
-  .secao2_container {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem 1rem;
-  }
-
-  .secao2_texto {
-    width: 100%;
-    max-width: none;
-    padding-left: 0;
-    padding-right: 0;
-    text-align: center;
-  }
-
-  /* CORREÇÃO AQUI: Adicionei #secao2 para aumentar a especificidade */
-  #secao2 .secao2_texto h3 {
-    font-size: 1.2rem; /* AGORA VAI MUDAR! */
-    text-align: center;
-    margin-bottom: 0.5rem;
-    overflow: visible;
-    display: block;
-    -webkit-line-clamp: unset;
-    -webkit-box-orient: unset;
-  }
-
-  .secao2_texto p {
-    text-align: center;
-    overflow: visible;
-    display: block;
-    -webkit-line-clamp: unset;
-    -webkit-box-orient: unset;
-    font-size: 1rem;
-    margin-bottom: 0;
-  }
-
-  .secao2_imagem {
-    max-width: 100%;
-  }
-
-  .secao2_imagem img {
-    width: 95%;
-    max-width: 500px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+  .secao1_imagem img,
+  .secao2_imagem img,
+  .secao4_imagem img,
+  .secao5_imagem img {
+      width: 95%;
+      max-width: 500px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
   }
 
   /* --- SEÇÃO 3 --- */
   #secao3 {
-    min-height: 500px; /* Ajuste para mobile */
-    padding: 30px 15px; /* Ajuste padding */
+      min-height: 500px;
+      padding: 30px 15px;
   }
 
   #secao3 h3 {
-    font-size: 2.5rem; /* Diminui a fonte do H3 para mobile */
-    margin-top: 5vh; /* Ajuste de margem */
-    text-align: center;
+      font-size: 2.5rem;
+      margin-top: 5vh;
+      text-align: center;
   }
 
   .secao3_texto {
-    font-size: 1.2rem; /* Diminui a fonte do texto */
-    text-align: center; /* Garante centralização */
+      font-size: 1.2rem;
+      text-align: center;
   }
 
   .secao3_container {
-    height: auto; /* Permite que o container se ajuste ao conteúdo */
-    min-height: unset;
-    justify-content: center; /* Centraliza verticalmente o conteúdo */
-    align-items: center; /* Centraliza horizontalmente o conteúdo */
+      height: auto;
+      min-height: unset;
+      justify-content: center;
+      align-items: center;
   }
 
   .secao3_paragrafo {
-    width: 95%; /* Ocupa mais largura */
-    padding-top: 5vh; /* Ajuste de padding */
-    margin: 0 auto; /* Centraliza */
-    text-align: center;
+      width: 95%;
+      padding-top: 5vh;
+      margin: 0 auto;
+      text-align: center;
   }
 
-  /* --- SEÇÃO 4 --- */
-  .secao4_container {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem 1rem;
-  }
-
-  .secao4_texto {
-    width: 100%;
-    max-width: none;
-    padding-left: 0;
-    padding-right: 0;
-    text-align: center;
-  }
-
-  /* CORREÇÃO AQUI: Adicionei #secao4 para aumentar a especificidade */
-  #secao4 .secao4_texto h3 {
-    font-size: 1.2rem; /* AGORA VAI MUDAR! */
-    text-align: center;
-    margin-bottom: 0.5rem;
-    overflow: visible;
-    display: block;
-    -webkit-line-clamp: unset;
-    -webkit-box-orient: unset;
-  }
-
-  .secao4_texto p {
-    text-align: center;
-    overflow: visible;
-    display: block;
-    -webkit-line-clamp: unset;
-    -webkit-box-orient: unset;
-    font-size: 1rem;
-    margin-bottom: 0;
-  }
-
-  .secao4_imagem {
-    max-width: 100%;
-  }
-
-  .secao4_imagem img {
-    width: 95%;
-    max-width: 500px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  /* --- SEÇÃO 5 --- */
-  .secao5_container {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem 1rem;
-  }
-
-  .secao5_texto {
-    width: 100%;
-    max-width: none;
-    padding-left: 0;
-    padding-right: 0;
-    text-align: center;
-  }
-
-  /* CORREÇÃO AQUI: Adicionei #secao5 para aumentar a especificidade */
-  #secao5 .secao5_texto h3 {
-    font-size: 1.2rem; /* AGORA VAI MUDAR! */
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-
-  .secao5_texto p {
-    text-align: center;
-    font-size: 1rem;
-  }
-
+  /* --- SEÇÃO 5 LI (Ajuste Mobile) --- */
   #secao5 li {
-    text-align: left;
-    margin: 0 auto;
-    width: fit-content;
-  }
-
-  .secao5_imagem {
-    max-width: 100%;
-  }
-
-  .secao5_imagem img {
-    width: 95%;
-    max-width: 500px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+      text-align: left;
+      margin: 0 auto;
+      width: fit-content;
   }
 
   /* --- SEÇÃO 6 --- */
   #secao6 {
-    min-height: 400px; /* Ajuste para mobile */
-    padding: 30px 15px; /* Ajuste padding */
+      min-height: 400px;
+      padding: 30px 15px;
   }
 
   #secao6 h3 {
-    font-size: 2.5rem; /* Diminui a fonte do H3 para mobile */
-    text-align: center;
+      font-size: 2.5rem;
+      text-align: center;
   }
 
   .secao6_conteudo {
-    max-width: 95%; /* Ocupa mais largura */
-    text-align: center;
+      max-width: 95%;
+      text-align: center;
   }
 
   .secao6_texto_container {
-    flex-direction: column; /* Empilha as colunas de texto */
-    align-items: center; /* Centraliza as colunas de texto */
-    margin-top: 15px; /* Ajuste de margem */
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15px;
   }
 
   .secao6_texto_esquerda,
   .secao6_texto_direita {
-    width: 100%; /* Ocupa a largura total */
-    text-align: center; /* Centraliza o texto em ambas as colunas */
-    font-size: 1rem; /* Diminui a fonte */
-    padding-top: 0; /* Remove padding */
-    margin-bottom: 1rem; /* Espaçamento entre as colunas */
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+      padding-top: 0;
+      margin-bottom: 1rem;
   }
 
   .secao6_texto_direita {
-    margin-right: 0; /* Remove margem */
-    padding-top: 0; /* Remove padding */
+      margin-right: 0;
+      padding-top: 0;
   }
 
   .secao6_texto_direita b {
-    text-align: center; /* Centraliza o negrito */
+      text-align: center;
   }
 
   /* --- SEÇÃO 7 --- */
   .secao7_container {
-    gap: 1.5rem;
-    padding: 1.5rem 1rem;
+      gap: 1.5rem;
+      padding: 1.5rem 1rem;
   }
 
   .secao7_logo img {
-    max-width: 150px; /* Diminui o logo */
-    padding-left: 0; /* Remove padding */
+      max-width: 150px;
+      padding-left: 0;
   }
 
   .secao7_texto {
-    max-width: 95%; /* Ocupa mais largura */
-    flex-direction: column; /* Empilha o ícone e a mensagem */
-    gap: 1rem; /* Ajuste de espaçamento */
-    text-align: center;
+      max-width: 95%;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
   }
 
   .secao7_linha {
-    flex-direction: column; /* Empilha a barra e a mensagem */
-    gap: 1rem;
+      flex-direction: column;
+      gap: 1rem;
   }
 
   .secao7_mensagem {
-    font-size: 1.5rem; /* Diminui a fonte */
-    text-align: center;
+      font-size: 1.5rem;
+      text-align: center;
   }
 
   .secao7_button button {
-    width: 80%; /* Aumenta o botão */
-    max-width: 300px; /* Limite */
-    height: 8vh; /* Ajuste a altura */
-    font-size: 1rem; /* Diminui a fonte do botão */
+      width: 80%;
+      max-width: 300px;
+      height: 8vh;
+      font-size: 1rem;
   }
 
-    /* --- SEÇÃO 8 (QUIZ) --- */
+  /* --- SEÇÃO 8 (QUIZ) --- */
   .secao81 {
-    width: 90%; /* Aumenta a largura do container do quiz */
-    padding: 3vh 1rem 5vh 1rem; /* Ajusta padding */
-    border-radius: 20px; /* Ajusta border-radius */
+      width: 90%;
+      padding: 3vh 1rem 5vh 1rem;
+      border-radius: 20px;
   }
 
   .secao81 h3 {
-    font-size: 2.2rem; /* Diminui a fonte do título do quiz */
-    letter-spacing: 3px; /* Ajusta espaçamento */
-    padding-top: 1.5rem;
+      font-size: 2.2rem;
+      letter-spacing: 3px;
+      padding-top: 1.5rem;
   }
 
   .secao81 h2 {
-    font-size: 1.2rem; /* Diminui a fonte do subtítulo */
-    padding-bottom: 2%;
+      font-size: 1.2rem;
+      padding-bottom: 2%;
   }
 
   #secao8 {
-    width: 95%; /* Aumenta a largura do quiz principal */
-    min-height: 200px; /* Ajusta altura mínima */
-    padding-bottom: 3%;
+      width: 95%;
+      min-height: 200px;
+      padding-bottom: 3%;
   }
 
   .content {
-    width: 95vw; /* Ocupa mais largura */
-    gap: 15px; /* Ajusta espaçamento */
-    align-items: center; /* Centraliza o conteúdo do quiz */
+      width: 95vw;
+      gap: 15px;
+      align-items: center;
   }
 
   .question {
-    font-size: 1.3rem; /* Diminui a fonte da pergunta */
-    padding-bottom: 1.5vh;
+      font-size: 1.3rem;
+      padding-bottom: 1.5vh;
   }
 
   .spnQtd {
-    font-size: 1.5rem; /* Diminui a fonte da quantidade */
-    padding-left: 0; /* Garante centralização */
-    text-align: center;
+      font-size: 1.5rem;
+      padding-left: 0;
+      text-align: center;
   }
 
   .answers {
-    align-items: center; /* Centraliza os botões de resposta */
+      align-items: center;
   }
 
   #secao8 .answers button {
-    width: 80vw; /* Ajusta a largura para ser responsiva */
-    max-width: 350px; /* Limita a largura máxima dos botões */
-    height: 7vh; /* Ajusta altura */
-    font-size: 1.1rem; /* Diminui a fonte dos botões */
-    text-align: center; /* Centraliza o texto dos botões */
+      width: 80vw;
+      max-width: 350px;
+      height: 7vh;
+      font-size: 1.1rem;
+      text-align: center;
   }
 
   #secao8 .answers button:hover {
-  border-bottom: none;
-  background-color: var(--hover-quiz);
-  font-size: 1.3rem;
-}
+      border-bottom: none;
+      background-color: var(--hover-quiz);
+      font-size: 1.3rem;
+  }
 
   .finish button {
-    width: 60%; /* Ajusta largura do botão de finalizar */
-    max-width: 250px;
-    height: 8vh;
-    font-size: 1.2rem;
+      width: 60%;
+      max-width: 250px;
+      height: 8vh;
+      font-size: 1.2rem;
   }
 
 
-    /* style contato */
+  /* --- RESPONSIVIDADE DO FORMULÁRIO DE CONTATO --- */
 
-.hero{
-    background-image: url('../assets/imagem_secao3.png'); /* Adicione aqui */
-    background-size: cover; /* Adicione para cobrir o elemento */
-    background-position: center; /* Adicione para centralizar a imagem */
-    background-repeat: no-repeat; /* Adicione para evitar repetição */
-    background-color: transparent;
-    margin: 90px;
-    display: flex;
-    justify-content: center;
-}
+  .hero {
+      margin: 0; /* Remove fixed margins */
+      padding: 20px 0; /* Add responsive padding */
+      display: flex;
+      flex-direction: column; /* Stack logo and form vertically */
+      align-items: center; /* Center horizontally */
+      justify-content: flex-start; /* Align content from the top */
+      min-height: auto; /* Allow height to adjust based on content */
+  }
 
-.contact {
-    background-image: url('../assets/imagem_secao3.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    margin: 90px;
-    display: flex;
-    justify-content: center;
-    min-height: 500px; /* <--- ADICIONE ISSO TEMPORARIAMENTE */
-    width: 100%; /* <--- ADICIONE ISSO TAMBÉM SE NÃO TIVER */
-}
+  .contact {
+      margin: 40px 15px; /* Reduce margin on smaller screens */
+      padding: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
 
+  .contact h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+  }
 
-.contact h2 {
-    text-align: center;
-    color: var(--secundary-color);
-    font-size: var(--font-tittle);
-    font-weight: 500;
-    margin-bottom: 30px;
-}
+  form {
+      max-width: 95%; /* Make form take up more width on small screens */
+      min-width: unset; /* IMPORTANT: Removes minimum width constraint */
+      width: 100%;
+      padding: 0 15px;
+      box-sizing: border-box;
+  }
 
-form {
-    max-width: 600px;
-    min-width: 600px;
-    margin: 0 auto;
-}
+  .form-group {
+      margin-bottom: 15px;
+  }
 
-.form-group {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+      padding: 12px;
+      font-size: 1rem;
+  }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid var(--secundary-color);
-    box-shadow: 10px 10px 5px 0px #0000004a;
-    border-radius: 10px;
-    font-size: var(--font-size2);
-}
+  .form-group textarea {
+      min-height: 120px;
+  }
 
-.form-group textarea {
-    resize: vertical;
-    min-height: 150px;
-}
+  .error-message {
+      font-size: 0.8rem;
+      margin-left: 5px;
+      margin-top: 3px;
+  }
 
-.error-message {
-    color: red;
-    font-size: var(--font-size2);
-    margin-left: 10px;
-    margin-top: 5px;
-}
+  #contactForm button {
+      width: 100%;
+      max-width: 250px;
+      height: 45px;
+      font-size: 1.1rem;
+      margin-top: 25px;
+  }
 
-#contactForm button {
-    margin-top: 30px;
-    width: 120px;
-    height: 35px;
-    color: var(--secundary-color);
-    background: transparent;
-    border: 2px solid;
-    cursor: pointer;
-    transition: var(--transition);
-}
+  .img_form {
+      width: 90%;
+      max-width: 300px;
+      margin-bottom: 30px;
+  }
 
-#contactForm button:hover {
-    border-radius: 0 10px 0 10px;
-    box-shadow: 0px 0px 10px 2px #ffffff18;
-    transform: scale(1.1);
-}
-  /*FOOTER MOBILE*/
+  .img_form img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+  }
+
+  body#contato {
+      padding-top: 20px;
+      padding-bottom: 20px;
+  }
+
+  /*FOOTER MOBILE (Se usado em outras páginas)*/
   footer {
-    padding: 30px 0;
+      padding: 30px 0;
   }
 
   footer ul {
-    gap: 20px; /* Menor espaçamento entre ícones */
+      gap: 20px;
   }
 
   footer img {
-    width: 40px; /* Menor tamanho dos ícones */
+      width: 40px;
   }
 
   footer .copyright {
-    margin-top: 20px;
-    font-size: 1rem;
+      margin-top: 20px;
+      font-size: 1rem;
   }
 }
