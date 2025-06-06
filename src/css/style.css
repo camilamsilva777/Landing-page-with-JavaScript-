@@ -996,7 +996,11 @@ footer .copyright {
   transition: all 0.3s ease;
 }
 
-nav > ul.nav-list {
+
+/* --- INICIO RESPONSIVIDADE GERAL PARA MOBILE (768px) --- */
+@media (max-width: 768px) {
+
+  nav > ul.nav-list {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -1026,63 +1030,80 @@ nav > ul.nav-list li > .barra-vertical {
   width: 100px;
   height: auto;
 }
-
-
-/* --- INICIO RESPONSIVIDADE GERAL PARA MOBILE (768px) --- */
-@media (max-width: 768px) {
   /* Garante que o menu mobile não exceda a tela */
-  .nav-list.active {
-      max-height: 100vh;
-      overflow-y: auto;
-  }
-
+@media (max-width: 768px) {
   nav > ul.nav-list {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background-color: var(--azul-header);
-      position: absolute;
-      top: 60px;
-      left: 0;
-      text-align: center;
-      padding: 10px 0;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      z-index: 99;
-      border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 132px; /* largura menor */
+    background-color: var(--azul-header);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    border-radius: 10px;
+
+    transform: translateX(210%); /* completamente fora da tela */
+    transition: transform 0.3s ease; /* animação suave */
+    overflow-x: hidden;
   }
 
+  #nav-list a:hover{
+    font-size: 1.2rem;
+  }
+  /* ==============================
+     2. Exibir só quando .active
+     ============================== */
   nav > ul.nav-list.active {
-      display: flex;
+    transform: translateX(136%);  /* puxa para dentro */
   }
 
-  nav > ul.nav-list li {
-      margin: 10px 0;
+ 
+  @media (max-width: 768px){
+      #nav-list .barra-vertical{
+    display: none;
   }
 
-  nav > ul.nav-list.active li > img,
-  nav > ul.nav-list.active li > .barra-vertical {
-      display: none;
+  #nav-list li img{
+  display: none;
+}
   }
 
   .hamburger-menu {
-      display: flex;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    margin-left: 20px;
   }
 
+  .hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--font);
+    transition: all 0.3s ease;
+  }
+
+  /* Animação do X */
   .hamburger-menu.active .bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
   }
-
   .hamburger-menu.active .bar:nth-child(2) {
-      opacity: 0;
+    opacity: 0;
   }
-
   .hamburger-menu.active .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
   }
 
   nav {
-      justify-content: space-between;
+    justify-content: space-between; /* garante espaço pro hambúrguer */
   }
+}
 
   /*RESPONSIVIDADE DO SLIDESHOW*/
   .slideshow-container {
