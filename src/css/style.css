@@ -1051,6 +1051,10 @@ nav > ul.nav-list li > .barra-vertical {
     overflow-x: hidden;
   }
 
+   #nav-list a{
+    font-size: 1rem;
+  }
+
   #nav-list a:hover{
     font-size: 1.2rem;
   }
