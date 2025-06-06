@@ -140,7 +140,7 @@ nav {
   padding: 16px 24px; /* Unificado */
 }
 
-.nav_list {
+.nav-list {
   display: flex;
   align-items: center;
   gap: 60px;
@@ -149,7 +149,7 @@ nav {
   padding: 0 0px;
 }
 
-.nav_list li a {
+.nav-list li a {
   color: rgb(0, 0, 0);
   font-size: 1.5rem;
 }
@@ -825,8 +825,31 @@ main .secao1_imagem img {
 /*FORMULARIO*/
 
 /* style contato */
-.hero{
 
+.img_form{
+    width: 100px; /* Faz a imagem ocupar 100% do seu container */
+  
+}
+
+
+/* Aplique o background ao body com o ID "contato" */
+body#contato { /* Maior especificidade e claro que é para o body */
+  background-image: url('../assets/imagem_secao3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* Opcional: Para garantir que o background cubra todo o viewport, mesmo com pouco conteúdo */
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
+/* Seção de Contato - Remova o background que sobrepõe */
+.contact {
+    background-color: transparent; /* Mantenha transparente para ver o background do body */
+    margin: 90px;
+    display: flex;
+    justify-content: center;
+    /* Verifique se não há nenhum background-image ou color aqui que esteja cobrindo o background do body */
 }
 
 .contact {
