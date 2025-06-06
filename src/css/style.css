@@ -5,7 +5,7 @@
 }
 
 /*ESTILIZAÇÃO GERAL*/
-body {
+body{
   margin: 0;
   padding: 0;
   font-family: 'FeatherBold', sans-serif;
@@ -825,11 +825,15 @@ main .secao1_imagem img {
 /*FORMULARIO*/
 
 /* style contato */
+.hero{
+
+}
+
 .contact {
     background-color: transparent;
     margin: 90px;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 
 .contact h2 {
@@ -1515,12 +1519,31 @@ nav > ul.nav-list li > .barra-vertical {
 
 
     /* style contato */
-.contact {
+
+.hero{
+    background-image: url('../assets/imagem_secao3.png'); /* Adicione aqui */
+    background-size: cover; /* Adicione para cobrir o elemento */
+    background-position: center; /* Adicione para centralizar a imagem */
+    background-repeat: no-repeat; /* Adicione para evitar repetição */
     background-color: transparent;
     margin: 90px;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
+
+.contact {
+    background-image: url('../assets/imagem_secao3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    margin: 90px;
+    display: flex;
+    justify-content: center;
+    min-height: 500px; /* <--- ADICIONE ISSO TEMPORARIAMENTE */
+    width: 100%; /* <--- ADICIONE ISSO TAMBÉM SE NÃO TIVER */
+}
+
 
 .contact h2 {
     text-align: center;
