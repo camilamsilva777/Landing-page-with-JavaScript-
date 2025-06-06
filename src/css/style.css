@@ -17,11 +17,6 @@ body {
 ul {
   list-style: none;
 }
-
-a {
-  text-decoration: none;
-}
-
 /*PALETA DE CORES*/
 :root {
   --primary-color:#0097f5;
@@ -152,7 +147,8 @@ nav {
   padding: 0 0px;
 }
 
-.nav-list li a { /* Corrigido de .nav_list para .nav-list */
+.nav-list li a {
+  text-decoration: none; /* Corrigido de .nav_list para .nav-list */
   color: rgb(0, 0, 0);
   font-size: 1.5rem;
 }
@@ -168,9 +164,8 @@ nav a:hover {
   transition: 0.3s ease-in-out;
 }
 
+
 .nav-list li a.active-link { /* Corrigido de .nav_list para .nav-list */
-  text-decoration: underline;
-  text-underline-offset: 4px;
   color: var(--azul-destaque);
 }
 

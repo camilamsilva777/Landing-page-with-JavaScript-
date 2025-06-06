@@ -220,3 +220,71 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', highlightNavLink);
   highlightNavLink(); // Call it once on page load to set the initial active link
 });
+
+
+// Seleciona todos os links do menu
+const menuLinks = document.querySelectorAll('nav ul li a');
+
+// Para cada link, adiciona um listener de clique
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // Remove a classe active-link de quem tiver
+    const ativo = document.querySelector('.active-link');
+    if (ativo) ativo.classList.remove('active-link');
+    
+    // Adiciona a classe no link clicado
+    link.classList.add('active-link');
+  });
+});
+
+
+// Seleciona todos os links do menu
+const menuLinks2 = document.querySelectorAll('nav ul li a');
+
+// Para cada link, adiciona um listener de clique
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // Remove a classe active-link de quem tiver
+    const ativo = document.querySelector('.active-link');
+    if (ativo) ativo.classList.remove('active-link');
+    
+    // Adiciona a classe no link clicado
+    link.classList.add('active-link');
+  });
+});
+
+  // seleciona seções e links do menu
+  const sections = document.querySelectorAll('section[id]');
+  const menuLinks3 = document.querySelectorAll('nav ul li a');
+
+  // função que atualiza a classe active-link com base no scroll
+  function updateActiveLink() {
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(sec => {
+      const top = sec.offsetTop - 100;      // ajuste pro seu header
+      const bottom = top + sec.offsetHeight;
+      const id = sec.getAttribute('id');
+
+      if (scrollY >= top && scrollY < bottom) {
+        menuLinks.forEach(link => link.classList.remove('active-link'));
+        const ativo = document.querySelector(`nav ul li a[href="#${id}"]`);
+        if (ativo) ativo.classList.add('active-link');
+      }
+    });
+  }
+
+  // listener de clique (mantém destaque no clique, mas é sobrescrito no scroll)
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuLinks.forEach(l => l.classList.remove('active-link'));
+      link.classList.add('active-link');
+    });
+  });
+
+  // dispara no scroll
+  window.addEventListener('scroll', updateActiveLink);
+
+  // dispara no load pra já setar o link correto
+  window.addEventListener('load', updateActiveLink);
+
