@@ -1030,16 +1030,16 @@ nav > ul.nav-list li > .barra-vertical {
   nav > ul.nav-list {
     display: flex;
     flex-direction: column;
-    width: 132px; /* largura menor */
+    width: 50vw; /* largura menor */
+    height: 40vh;
     background-color: var(--azul-header);
     position: absolute;
-    top: 60px;
+    top: 0px;
     left: 0;
     text-align: center;
     padding: 10px 0;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 99;
-    border-radius: 10px;
 
     transform: translateX(210%); /* completamente fora da tela */
     transition: transform 0.3s ease; /* animação suave */
@@ -1057,7 +1057,7 @@ nav > ul.nav-list li > .barra-vertical {
      2. Exibir só quando .active
      ============================== */
   nav > ul.nav-list.active {
-    transform: translateX(136%);  /* puxa para dentro */
+    transform: translateX(-100%);  /* puxa para dentro */
   }
 
  
@@ -1066,8 +1066,14 @@ nav > ul.nav-list li > .barra-vertical {
     display: none;
   }
 
+
+
   #nav-list li img{
   display: none;
+}
+
+#nav-list{
+  width: 50vw;
 }
   }
 
@@ -1076,13 +1082,19 @@ nav > ul.nav-list li > .barra-vertical {
     cursor: pointer;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
+    width: 50px;
     height: 20px;
-    margin-left: 20px;
+    margin-left: 0px;
+  }
+
+  nav{
+    margin-right: 0;
+    margin-top: 0;
+    margin-left: 40%;
   }
 
   .hamburger-menu .bar {
-    width: 100%;
+    width: 80%;
     height: 3px;
     background-color: var(--font);
     transition: all 0.3s ease;
