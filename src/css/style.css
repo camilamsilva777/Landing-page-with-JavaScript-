@@ -773,14 +773,12 @@ main .secao1_imagem img {
   background-color: var(--border);
   border-bottom: 7px solid var(--border-button);
   color: white;
-  font-size: 1.3rem;
   animation: pulse 2s ease-in-out infinite;
 }
 
 #secao8 .answers button:hover {
   border-bottom: none;
   background-color: var(--hover-quiz);
-  font-size: 1.5rem;
 }
 
 .finish {
