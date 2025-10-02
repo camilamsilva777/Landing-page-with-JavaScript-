@@ -1,6 +1,6 @@
 # 🌊 ARCA – Flood Alert Platform 
 
-Landing page created as part of the **Global Solution** project at **FIAP**.  
+Landing page created as part of the **Global Solution** project at my college **FIAP**.  
 The challenge was to propose and prototype a **solution to the flooding problem in São Paulo**. 
 As part of the **Front-End Design** and **Web Development** courses, I developed a fictional brand called **ARCA** and built its landing page to present the solution and engage the community.
 
@@ -34,26 +34,27 @@ The landing page simulates the communication of a startup/initiative focused on 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/SEU_USUARIO/arca-landing-page.git
+   git clone https://github.com/YOUR_USER/arca-landing-page.git
 
 
 Open the index.html file in your browser.
 
-No dependencies required – project built only with HTML, CSS and JavaScript.
+*No dependencies required – project built only with HTML, CSS and JavaScript.
 
 📸 Preview
 
-Add here a screenshot or GIF of the landing page.
-Example:
+<img width="1359" height="644" alt="image" src="https://github.com/user-attachments/assets/8144f203-bde1-4085-9d43-63095b567edc" />
 
 
 📚 Academic Context
 
-This project was developed for the Global Solution (2024/2) at FIAP, integrating the disciplines:
+This project was developed for the Global Solution (2025/1) at FIAP, integrating the disciplines:
 
 Front-End Design
 
 Web Development
+
+Software and Total Experience Design
 
 It represents the design and communication layer of the broader solution proposal for the flooding issue in São Paulo.
 
@@ -61,6 +62,7 @@ It represents the design and communication layer of the broader solution proposa
 
 Camila de Mendonça da Silva
 
-LinkedIn
+<p align="center">
+  <a href="www.linkedin.com/in/camila-mendonça-6b9640353" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+</p>
 
-GitHub
