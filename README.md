@@ -41,26 +41,26 @@ Open the index.html file in your browser.
 
 *No dependencies required – project built only with HTML, CSS and JavaScript.
 
-📸 Preview
+## 📸 Preview
 
 <img width="1359" height="644" alt="image" src="https://github.com/user-attachments/assets/8144f203-bde1-4085-9d43-63095b567edc" />
 
 
-📚 Academic Context
+## 📚 Academic Context
 
-This project was developed for the Global Solution (2025/1) at FIAP, integrating the disciplines:
+This project was developed for the Global Solution (2025/1) at my college, integrating the disciplines:
 
-Front-End Design
+- ✅ **Front-End Design**
 
-Web Development
+- ✅ **Web Development**
 
-Software and Total Experience Design
+- ✅ **Software and Total Experience Design**
 
 It represents the design and communication layer of the broader solution proposal for the flooding issue in São Paulo.
 
-👩‍💻 Author
+## 👩‍💻 Author
 
-Camila de Mendonça da Silva
+**Camila de Mendonça da Silva**
 
 <p align="center">
   <a href="www.linkedin.com/in/camila-mendonça-6b9640353" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
